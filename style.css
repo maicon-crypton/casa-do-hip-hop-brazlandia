@@ -17,20 +17,29 @@
     /* --- Cores Primárias --- */
     --color-primary-black: #0E0E0E;
     --color-primary-white: #FFFFFF;
-    /* --- Cores de Accent --- */
-    --color-accent-yellow: #FFC107;
-    --color-accent-yellow-hover: #FFD54F;
+    /* --- Cores de Accent (Instagram-inspired) --- */
+    --color-accent-gold: #FDCB6E;
+    --color-accent-gold-hover: #FFEAA7;
+    --color-accent-pink: #E94560;
+    --color-accent-purple: #8338EC;
+    /* --- Cores de Accent Legacy --- */
+    --color-accent-yellow: #FDCB6E;
+    --color-accent-yellow-hover: #FFEAA7;
     --color-accent-red: #E53935;
     --color-accent-red-hover: #EF5350;
     /* --- Cores de Background --- */
     --color-bg-dark: #1F1F1F;
     --color-bg-darker: #0A0A0A;
     --color-bg-white: #FAFAFA;
+    /* --- Cores de Background Instagram --- */
+    --color-bg-instagram-1: #1a1a2e;
+    --color-bg-instagram-2: #16213e;
+    --color-bg-instagram-3: #0f3460;
     /* --- Cores de Texto --- */
     --color-text-primary: #FFFFFF;
     --color-text-secondary: #B0B0B0;
     --color-text-muted: #757575;
-    --color-text-accent: #FFC107;
+    --color-text-accent: #FDCB6E;
     /* --- Cores de Borda --- */
     --color-border-light: rgba(255, 255, 255, 0.1);
     --color-border-medium: rgba(255, 255, 255, 0.2);
@@ -315,7 +324,7 @@ ol {
     font-size: var(--text-xl);
     letter-spacing: 0.05em;
     padding: var(--spacing-4) var(--spacing-10);
-    background-color: var(--color-accent-yellow);
+    background-color: var(--color-accent-gold);
     color: var(--color-primary-black);
     border-radius: var(--radius-md);
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
@@ -328,14 +337,14 @@ ol {
     content: '';
     position: absolute;
     inset: 0;
-    background: linear-gradient(135deg, transparent 40%, rgba(255, 255, 255, 0.3) 50%, transparent 60%);
+    background: linear-gradient(135deg, transparent 40%, rgba(255, 255, 255, 0.4) 50%, transparent 60%);
     transform: translateX(-100%);
     transition: transform 600ms;
 }
 
 .btn-primary:hover {
     color: var(--color-primary-black);
-    box-shadow: var(--shadow-glow-yellow);
+    box-shadow: 0 0 25px 5px rgba(253, 203, 110, 0.4);
     transform: translateY(-2px);
 }
 
@@ -393,6 +402,9 @@ ol {
 
 .nav-container {
     height: 6rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .nav-container--scrolled {
@@ -1043,8 +1055,6 @@ ol {
 }
 
 
-/* --- Background Text (Decorative) --- */
-
 .bg-text {
     position: absolute;
     font-family: var(--font-display);
@@ -1055,6 +1065,43 @@ ol {
     pointer-events: none;
     user-select: none;
     z-index: 0;
+}
+
+/* --- Reusable Instagram-style Gradient Background --- */
+
+.section-gradient-bg {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+}
+
+.section-gradient-bg::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+    background: linear-gradient(45deg, 
+        rgba(233, 69, 96, 0.15) 0%, 
+        rgba(131, 56, 236, 0.15) 25%, 
+        rgba(253, 203, 110, 0.15) 50%, 
+        rgba(233, 69, 96, 0.15) 75%, 
+        rgba(131, 56, 236, 0.15) 100%);
+    background-size: 400% 400%;
+    animation: gradientShift 8s ease infinite;
+}
+
+.section-gradient-bg > * {
+    position: relative;
+    z-index: 1;
+}
+
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
 
 .bg-text--position {
