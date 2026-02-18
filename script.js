@@ -161,19 +161,19 @@
             // Add scrolled state
             elements.mainNav.classList.add('main-nav--scrolled');
 
-            // Adjust nav height (from 6rem to 5rem)
+            // Adjust nav height using CSS class
             const navContainer = elements.mainNav.querySelector('.container');
             if (navContainer) {
-                navContainer.style.height = '5rem';
+                navContainer.classList.add('nav-container--scrolled');
             }
         } else {
             // Remove scrolled state
             elements.mainNav.classList.remove('main-nav--scrolled');
 
-            // Reset nav height
+            // Reset nav height - remove scrolled class
             const navContainer = elements.mainNav.querySelector('.container');
             if (navContainer) {
-                navContainer.style.height = '6rem';
+                navContainer.classList.remove('nav-container--scrolled');
             }
         }
     }
@@ -265,6 +265,38 @@
         window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
     }
 
+    /**
+     * Initialize event delegation for enrollment buttons
+     * Replaces inline onclick handlers
+     */
+    function initializeEnrollmentButtons() {
+        document.addEventListener('click', function(event) {
+            const button = event.target.closest('[data-workshop]');
+            if (button) {
+                event.preventDefault();
+                const workshopName = button.getAttribute('data-workshop');
+                handleEnrollment(workshopName);
+            }
+        });
+    }
+
+    /**
+     * Initialize Instagram Embed
+     * Handles lazy loading of Instagram posts
+     */
+    function initializeInstagramEmbed() {
+        if (window.instgrm) {
+            window.instgrm.Embeds.process();
+        } else {
+            // Retry if Instagram script not loaded yet
+            window.addEventListener('load', function() {
+                if (window.instgrm) {
+                    window.instgrm.Embeds.process();
+                }
+            });
+        }
+    }
+
     // Make function globally available for inline onclick handlers
     window.handleEnrollment = handleEnrollment;
 
@@ -322,6 +354,12 @@
 
         // Initialize Instagram carousel
         initializeInstagramCarousel();
+
+        // Initialize enrollment buttons (event delegation)
+        initializeEnrollmentButtons();
+
+        // Initialize Instagram embed
+        initializeInstagramEmbed();
 
         // Set up scroll event listener (debounced for performance)
         window.addEventListener('scroll', debouncedScrollHandler, { passive: true });

@@ -389,7 +389,33 @@ ol {
 }
 
 
-/* --- Navigation --- */
+/* --- Navigation Container Heights --- */
+
+.nav-container {
+    height: 6rem;
+}
+
+.nav-container--scrolled {
+    height: 5rem;
+}
+
+/* --- Text Colors Utility Classes --- */
+
+.text-accent {
+    color: var(--color-accent-yellow);
+}
+
+.text-secondary {
+    color: var(--color-text-secondary);
+}
+
+.text-muted-light {
+    color: #999;
+}
+
+.text-bg-text {
+    color: rgba(255, 255, 255, 0.05);
+}
 
 .main-nav {
     position: fixed;
@@ -1022,12 +1048,22 @@ ol {
 .bg-text {
     position: absolute;
     font-family: var(--font-display);
-    font-size: 15rem;
-    color: rgba(255, 255, 255, 0.03);
-    white-space: nowrap;
+    font-size: 12rem;
+    line-height: 1;
+    color: var(--color-text-muted);
+    opacity: 0.1;
+    pointer-events: none;
     user-select: none;
     z-index: 0;
-    pointer-events: none;
+}
+
+.bg-text--position {
+    top: -2.5rem;
+    left: -2.5rem;
+}
+
+.accent-divider {
+    background-color: var(--color-accent-yellow);
 }
 
 

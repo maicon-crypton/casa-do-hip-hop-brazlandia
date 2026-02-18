@@ -65,7 +65,7 @@
          1. NAVEGAÇÃO
          ======================================================================== -->
     <nav class="main-nav" id="main-nav" role="navigation" aria-label="Navegação principal">
-        <div class="container flex items-center justify-between" style="height: 6rem;">
+        <div class="container nav-container">
             <!-- Logo -->
             <a href="#" class="nav-logo" aria-label="Casa do Hip Hop Brazlandia - Página inicial">
                 CASA DO <span class="nav-logo__accent">HIP HOP</span>
@@ -154,12 +154,12 @@
                     <!-- Texto Sobre -->
                     <div class="relative" data-aos="fade-right">
                         <!-- Texto de Fundo Decorativo -->
-                        <span class="bg-text" style="top: -2.5rem; left: -2.5rem;" aria-hidden="true">RAP</span>
+                        <span class="bg-text bg-text--position" aria-hidden="true">RAP</span>
 
                         <div class="relative z-10">
                             <h2 id="about-title" class="mb-8 leading-tight">
                                 MAIS QUE UM PROJETO, <br>
-                                <span style="color: var(--color-accent-yellow);">UMA FAMÍLIA.</span>
+                                <span class="text-accent">UMA FAMÍLIA.</span>
                             </h2>
 
                             <p class="text-xl leading-relaxed mb-8">
@@ -204,16 +204,16 @@
                 <div class="flex flex-col md:flex-row md:items-end justify-between mb-20 gap-6">
                     <div data-aos="fade-up">
                         <h2 id="workshops-title" class="mb-4">
-                            APRENDE COM <span style="color: var(--color-accent-yellow);">OS MELHORES</span>
+                            APRENDE COM <span class="text-accent">OS MELHORES</span>
                         </h2>
-                        <p class="text-lg" style="color: var(--color-text-secondary);">Inscrições abertas para o semestre 2024.2</p>
+                        <p class="text-lg text-secondary">Inscrições abertas para o semestre 2024.2</p>
                     </div>
 
                     <!-- Linha Decorativa -->
                     <div class="h-[2px] flex-grow mx-10 bg-white/10 hidden md:block" data-aos="stretch-x"></div>
 
                     <!-- Badge -->
-                    <span class="font-display text-2xl uppercase tracking-widest hidden md:block" style="color: var(--color-accent-yellow);">ELEMENTOS</span>
+                    <span class="font-display text-2xl uppercase tracking-widest hidden md:block text-accent">ELEMENTOS</span>
                 </div>
 
                 <!-- Grid de Cards -->
@@ -231,7 +231,7 @@
                             <p class="workshop-card__description">
                                 Desenvolve a tua consciência corporal e aprende os fundamentos do breaking com b-boys veteranos.
                             </p>
-                            <button onclick="handleEnrollment('Breaking Dance')" class="workshop-card__button" aria-label="Reservar vaga na oficina de Breaking Dance">
+                            <button data-workshop="Breaking Dance" class="workshop-card__button" aria-label="Reservar vaga na oficina de Breaking Dance">
                                 RESERVAR VAGA
                             </button>
                         </div>
@@ -250,7 +250,7 @@
                             <p class="workshop-card__description">
                                 Explora técnicas de spray, murais de grande escala e a história da arte urbana no Distrito Federal.
                             </p>
-                            <button onclick="handleEnrollment('Graffiti Art')" class="workshop-card__button" aria-label="Reservar vaga na oficina de Graffiti Art">
+                            <button data-workshop="Graffiti Art" class="workshop-card__button" aria-label="Reservar vaga na oficina de Graffiti Art">
                                 RESERVAR VAGA
                             </button>
                         </div>
@@ -269,7 +269,7 @@
                             <p class="workshop-card__description">
                                 Domina as pick-ups. Aprende scratch, beatmatching e a arte de comandar a pista de dança.
                             </p>
-                            <button onclick="handleEnrollment('DJ & Turntablism')" class="workshop-card__button" aria-label="Reservar vaga na oficina de DJ e Turntablism">
+                            <button data-workshop="DJ & Turntablism" class="workshop-card__button" aria-label="Reservar vaga na oficina de DJ e Turntablism">
                                 RESERVAR VAGA
                             </button>
                         </div>
@@ -284,16 +284,16 @@
         <section class="instructors-section" aria-labelledby="instructors-title">
             <div class="container">
                 <!-- Texto de Fundo -->
-                <h2 class="text-8xl md:text-[12rem] font-display text-center absolute left-0 w-full select-none -mt-20 z-0" style="color: rgba(255,255,255,0.05);" aria-hidden="true">
+                <h2 class="text-8xl md:text-[12rem] font-display text-center absolute left-0 w-full select-none -mt-20 z-0 text-bg-text" aria-hidden="true">
                     LEGADO
                 </h2>
 
                 <!-- Cabeçalho -->
                 <div class="relative z-10 text-center mb-24" data-aos="zoom-in">
                     <h2 id="instructors-title" class="mb-4">
-                        NOSSOS <span style="color: var(--color-accent-yellow);">MESTRES</span>
+                        NOSSOS <span class="text-accent">MESTRES</span>
                     </h2>
-                    <div class="w-24 h-1 mx-auto" style="background-color: var(--color-accent-yellow);"></div>
+                    <div class="w-24 h-1 mx-auto accent-divider"></div></div>
                 </div>
 
                 <!-- Grid de Instrutores -->
@@ -347,7 +347,7 @@
         <section id="eventos" class="events-section" aria-labelledby="events-title">
             <div class="container">
                 <h2 id="events-title" class="flex items-center gap-4 mb-20 flex-wrap">
-                    CALENDÁRIO <span style="color: #999;">DE RUA</span>
+                    CALENDÁRIO <span class="text-muted-light">DE RUA</span>
                     <span class="live-badge ml-auto" aria-live="polite">AO VIVO</span>
                 </h2>
 
@@ -405,7 +405,7 @@
 
         <div class="container">
             <h2 id="instagram-title" class="text-center mb-16">
-                NOSSO <span style="color: var(--color-accent-yellow);">INSTAGRAM</span>
+                NOSSO <span class="text-accent">INSTAGRAM</span>
             </h2>
 
             <!-- Instagram Carousel -->
@@ -513,18 +513,7 @@
     <!-- Scripts -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="script.js"></script>
-
-    <!-- Instagram Embed Script -->
     <script async defer src="https://www.instagram.com/embed.js"></script>
-
-    <!-- Initialize Instagram Embed -->
-    <script>
-        window.addEventListener('load', function() {
-            if (window.instgrm) {
-                window.instgrm.Embeds.process();
-            }
-        });
-    </script>
 </body>
 
 </html>
