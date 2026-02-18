@@ -63,16 +63,16 @@ casa-do-hip-hop-brazlandia/
 ├── robots.txt            # Diretivas para motores de busca
 ├── sitemap.xml           # Mapa do site (SEO)
 ├── .htaccess             # Configurações Apache (security headers)
-├── netlify.toml           # Configurações Netlify
-├── vercel.json           # Configurações Vercel
-├── _redirects            # Redirects Netlify
-├── README.md             # Documentação do projeto
-├── ARCHITECTURE.md       # Arquitetura de produção
-├── .gitignore            # Arquivos ignorados pelo Git
-├── assets/               # Recursos estáticos
-│   └── favicons/         # Favicons e PWA manifest
+├── netlify.toml          # Configurações Netlify
+├── vercel.json          # Configurações Vercel
+├── _redirects           # Redirects Netlify
+├── README.md            # Documentação do projeto
+├── ARCHITECTURE.md      # Arquitetura de produção
+├── .gitignore           # Arquivos ignorados pelo Git
+├── assets/              # Recursos estáticos
+│   └── favicons/        # Favicons e PWA manifest
 └── plans/
-    └── plan.md           # Planejamento do projeto
+    └── plan.md          # Planejamento do projeto
 ```
 
 ## 🎯 Funcionalidades
