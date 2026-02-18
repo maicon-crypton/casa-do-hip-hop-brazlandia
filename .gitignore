@@ -1,37 +1,46 @@
-# Sistema operacional
-.DS_Store
-Thumbs.db
-desktop.ini
+# Dependencies
+/node_modules
+/bower_components
 
-# Editores e IDEs
-.vscode/
-.idea/
-*.swp
-*.swo
-*~
-.project
-.settings/
-.classpath
+# Build output
+/dist
+/build
+/public
 
-# Logs
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env.*
+
+# Log files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
 *.log
 logs/
+
+# IDE & Editor directories
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
 
 # Temporary files
 *.tmp
 *.temp
-
-# Node.js (se usado)
-node_modules/
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-
-# Imagens de backup (se geradas)
 *.bak
-*.backup
-
-# Ambiente virtual (se usado)
-venv/
-env/
-.env.local
+*.swp
+*~

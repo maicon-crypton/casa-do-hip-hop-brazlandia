@@ -1,115 +1,74 @@
 # Casa do Hip Hop Brazlândia
 
-> Cultura, arte e transformação através da dança, rima e graffiti.
+## Descrição do Projeto
 
-[![Website](https://img.shields.io/badge/Website-Live-brightgreen)](https://acasadohiphopbrazlandia.com.br)
-[![License](https://img.shields.io/badge/License-MIT-blue)](LICENSE)
-[![GitHub issues](https://img.shields.io/github/issues/maicon-crypton/casa-do-hip-hop-brazlandia)](https://github.com/maicon-crypton/casa-do-hip-hop-brazlandia/issues)
-[![GitHub stars](https://img.shields.io/github/stars/maicon-crypton/casa-do-hip-hop-brazlandia)](https://github.com/maicon-crypton/casa-do-hip-hop-brazlandia/stargazers)
-[![GitHub last commit](https://img.shields.io/github/last-commit/maicon-crypton/casa-do-hip-hop-brazlandia)](https://github.com/maicon-crypton/casa-do-hip-hop-brazlandia/commits/main)
+Website institucional da **Casa do Hip Hop Brazlândia**, um espaço cultural dedicado à promoção e disseminação da cultura hip hop em Brazlândia, DF, Brasil. O projeto serve como uma plataforma digital para divulgar oficinas, eventos e a história do movimento na região, focando nos quatro elementos da cultura: Breaking, Graffiti, MC (Rima) e DJ.
 
-## 📋 Descrição
+O design é minimalista, escuro e impactante, com foco em uma experiência de usuário imersiva e responsiva (Mobile-First).
 
-Website institucional da Casa do Hip Hop Brazlândia, um espaço cultural dedicado à promoção e disseminação da cultura hip hop em Brazlândia, DF, Brasil. O projeto oferece oficinas e eventos culturais nas áreas de:
+## Tecnologias Utilizadas
 
-- **Breaking** (dança)
-- **Rima/MC** (rap)
-- **Graffiti** (arte urbana)
-- **DJ** (música)
-
-## 🛠️ Tecnologias Utilizadas
+O projeto foi construído utilizando tecnologias web modernas para garantir performance, estilo e interatividade.
 
 | Categoria | Tecnologia |
 |------------|------------|
-| Frontend | HTML5, CSS3, JavaScript (ES6+) |
-| Framework CSS | Tailwind CSS (CDN) |
-| Animações | AOS (Animate On Scroll) |
-| Fontes | Google Fonts (Bebas Neue, Inter) |
-| Hospedagem | Netlify / Vercel |
+| **Estrutura** | HTML5 Semântico |
+| **Estilização** | CSS3, Tailwind CSS (via CDN) |
+| **Interatividade**| JavaScript (ES6+) |
+| **Animações** | AOS.js (Animate On Scroll) |
+| **Fontes** | Google Fonts ('Bebas Neue' e 'Outfit') |
+| **Hospedagem** | Otimizado para Netlify e Vercel |
 
-## 🚀 Como Executar
+Futuramente, o projeto integrará a **API do Google Gemini** para funcionalidades de IA.
 
-### Pré-requisitos
+## Como Rodar Localmente
 
-- Navegador web moderno (Chrome, Firefox, Edge, Safari)
-- Conexão com a internet (para carregar bibliotecas externas)
+Este é um projeto web estático e não requer um servidor complexo ou compilação.
 
-### Executando o projeto localmente
+1.  **Clone o repositório:**
+    ```bash
+    git clone https://github.com/maicon-crypton/casa-do-hip-hop-brazlandia.git
+    ```
 
-1. Clone o repositório:
-```bash
-git clone https://github.com/maicon-crypton/casa-do-hip-hop-brazlandia.git
+2.  **Navegue até a pasta do projeto:**
+    ```bash
+    cd casa-do-hip-hop-brazlandia-main
+    ```
+
+3.  **Abra o arquivo `index.html` no seu navegador:**
+    A maneira mais simples é clicar duas vezes no arquivo `index.html`. Para uma melhor experiência de desenvolvimento, recomenda-se usar a extensão **Live Server** no Visual Studio Code, que recarrega a página automaticamente após alterações no código.
+
+## Estrutura de Pastas
+
+A organização dos arquivos segue uma estrutura lógica para facilitar a manutenção e escalabilidade.
+
+```
+/
+├── assets/             # Recursos estáticos (imagens, favicons)
+├── plans/              # Documentos de planejamento
+├── _redirects          # Regras de redirecionamento (Netlify)
+├── .gitignore          # Arquivos e pastas ignorados pelo Git
+├── .htaccess           # Configurações para servidores Apache
+├── 404.html            # Página de erro 404 customizada
+├── ARCHITECTURE.md     # Documentação da arquitetura
+├── index.html          # Página principal
+├── netlify.toml        # Arquivo de configuração da Netlify
+├── privacidade.html    # Página de Política de Privacidade
+├── README.md           # Este arquivo
+├── robots.txt          # Diretivas para mecanismos de busca (SEO)
+├── script.js           # Código JavaScript principal
+├── sitemap.xml         # Mapa do site para SEO
+├── style.css           # Folha de estilos CSS customizada
+├── termos.html         # Página de Termos de Uso
+└── vercel.json         # Arquivo de configuração da Vercel
 ```
 
-2. Navegue até o diretório do projeto:
-```bash
-cd casa-do-hip-hop-brazlandia
-```
+## Autor
 
-3. Abra o arquivo `index.html` no seu navegador:
-   - Duplo clique no arquivo `index.html`
-   - Ou use uma extensão como "Live Server" no VS Code
+Este projeto está sendo gerenciado e desenvolvido por:
 
-## 📁 Estrutura de Pastas
-
-```
-casa-do-hip-hop-brazlandia/
-├── index.html              # Página principal
-├── style.css              # Estilos customizados
-├── script.js              # Scripts JavaScript
-├── privacidade.html       # Política de Privacidade (LGPD)
-├── termos.html            # Termos de Uso
-├── 404.html              # Página de erro 404
-├── robots.txt            # Diretivas para motores de busca
-├── sitemap.xml           # Mapa do site (SEO)
-├── .htaccess             # Configurações Apache (security headers)
-├── netlify.toml          # Configurações Netlify
-├── vercel.json          # Configurações Vercel
-├── _redirects           # Redirects Netlify
-├── README.md            # Documentação do projeto
-├── ARCHITECTURE.md      # Arquitetura de produção
-├── .gitignore           # Arquivos ignorados pelo Git
-├── assets/              # Recursos estáticos
-│   └── favicons/        # Favicons e PWA manifest
-└── plans/
-    └── plan.md          # Planejamento do projeto
-```
-
-## 🎯 Funcionalidades
-
-- ✅ Design responsivo (mobile-first)
-- ✅ Animações de scroll suaves (AOS)
-- ✅ Galeria de imagens com lazy loading
-- ✅ Seções informativas sobre a história do hip hop
-- ✅ Apresentação dos elementos da cultura (Breaking, DJ, MC, Graffiti)
-- ✅ Informações sobre localização e contato via WhatsApp
-- ✅ Design moderno com identidade visual autêntica
-- ✅ SEO otimizado (meta tags, sitemap, robots.txt)
-- ✅ Security headers (CSP, X-Frame-Options, etc.)
-- ✅ Conformidade LGPD (Política de Privacidade)
-- ✅ Página 404 customizada
-- ✅ Compatível com Netlify e Vercel
-
-## 🔒 Segurança e LGPD
-
-- Este site **não coleta dados pessoais** dos visitantes
-- Política de Privacidade e Termos de Uso disponíveis
-- Headers de segurança implementados
-- HTTPS forçado (configuração do provedor)
-
-## 📄 Licença
-
-Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+-   **Maicon** ([@maicon-crypton](https://github.com/maicon-crypton))
 
 ---
 
-## 👨‍💻 Autor
-
-Desenvolvido por **Maicon** (Maicon - Rima & Poesia)
-
-- GitHub: [@maicon-crypton](https://github.com/maicon-crypton)
-- WhatsApp: [Falar com a gente](https://wa.me/5561999999999)
-
----
-
-*Transformando vidas através da cultura* 🧢🎤🎨
+*Cultura, arte e transformação através da dança, rima e graffiti.*
