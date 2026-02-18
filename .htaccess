@@ -1,0 +1,176 @@
+# ============================================================
+# Casa do Hip Hop Brazlandia - Security Headers
+# Apache (.htaccess) Configuration
+# ============================================================
+
+# Verifica se o modulo mod_rewrite esta habilitado
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    
+    # Redirecionar HTTP para HTTPS
+    # Remova/comente as linhas abaixo se HTTPS nao estiver disponivel
+    # RewriteCond %{HTTPS} off
+    # RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+</IfModule>
+
+# ============================================================
+# Security Headers
+# ============================================================
+
+<IfModule mod_headers.c>
+
+    # ----------------------------------------------------------------
+    # 1. X-Frame-Options - Previne Clickjacking
+    # ----------------------------------------------------------------
+    # SAMEORIGIN: Permite que o site seja embedded apenas no mesmo dominio
+    Header always set X-Frame-Options "SAMEORIGIN"
+    
+    # ----------------------------------------------------------------
+    # 2. X-Content-Type-Options - Previne MIME Sniffing
+    # ----------------------------------------------------------------
+    # Impede o navegador de interpretar arquivos como um tipo diferente
+    Header always set X-Content-Type-Options "nosniff"
+    
+    # ----------------------------------------------------------------
+    # 3. X-XSS-Protection - Protecao contra XSS (Legacy)
+    # ----------------------------------------------------------------
+    # Mantido para compatibilidade com navegadores mais antigos
+    Header always set X-XSS-Protection "1; mode=block"
+    
+    # ----------------------------------------------------------------
+    # 4. Referrer-Policy - Controla informacoes do referenciador
+    # ----------------------------------------------------------------
+    # strict-origin-when-cross-origin: Envia apenas a origem para links externos
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+    
+    # ----------------------------------------------------------------
+    # 5. Permissions-Policy - Controla permissoes do navegador
+    # ----------------------------------------------------------------
+    # Desabilita recursos que nao sao usados no site
+    Header always set Permissions-Policy "geolocation=(), microphone=(), camera=(), payment=(), usb=()"
+    
+    # ----------------------------------------------------------------
+    # 6. Content-Security-Policy (CSP) - Protecao Principal
+    # ----------------------------------------------------------------
+    # Esta policy permite apenas recursos de origens confiáveis
+    
+    # Default: apenas mesmo dominio
+    Header always set Content-Security-Policy "default-src 'self';"
+    
+    # Script: proprio + inline (para AOS e Tailwind CDN) + unpkg.com + tailwindcss.com
+    Header always set Content-Security-Policy "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://unpkg.com https://cdn.tailwindcss.com;"
+    
+    # Style: proprio + inline + Google Fonts + unpkg.com
+    Header always set Content-Security-Policy "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://unpkg.com;"
+    
+    # Font: proprio + Google Fonts
+    Header always set Content-Security-Policy "font-src 'self' https://fonts.gstatic.com data:;"
+    
+    # Image: proprio + Unsplash + data URI
+    Header always set Content-Security-Policy "img-src 'self' https://images.unsplash.com data:;"
+    
+    # Connect: proprio + WebSocket (se necessario)
+    Header always set Content-Security-Policy "connect-src 'self';"
+    
+    # Frame: nenhum frame externo permitido
+    Header always set Content-Security-Policy "frame-ancestors 'self';"
+    
+    # ----------------------------------------------------------------
+    # 7. HSTS - HTTP Strict Transport Security
+    # ----------------------------------------------------------------
+    # Descomente esta linha apos configurar HTTPS corretamente
+    # Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains"
+
+</IfModule>
+
+# ============================================================
+# Protecao de Arquivos
+# ============================================================
+
+# Impedir acesso a arquivos ocultos
+<FilesMatch "^\.">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+# Proteger arquivo .gitignore
+<FilesMatch "\.gitignore$">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+# Proteger arquivos de log
+<FilesMatch "\.(log|tmp|temp)$">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+# ============================================================
+# Compression (Gzip)
+# ============================================================
+
+<IfModule mod_deflate.c>
+    # Adiciona compression gzip para os seguintes tipos
+    AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript application/json
+</IfModule>
+
+# ============================================================
+# Cache de Navegador (Performance)
+# =========================================================>
+
+<IfModule mod_expires.c>
+    
+    ExpiresActive On
+    
+    # Imagens - cache por 1 mes
+    ExpiresByType image/jpeg "access plus 1 month"
+    ExpiresByType image/gif "access plus 1 month"
+    ExpiresByType image/png "access plus 1 month"
+    ExpiresByType image/webp "access plus 1 month"
+    ExpiresByType image/svg+xml "access plus 1 month"
+    ExpiresByType image/x-icon "access plus 1 month"
+    
+    # CSS e JavaScript - cache por 1 semana
+    ExpiresByType text/css "access plus 1 week"
+    ExpiresByType application/javascript "access plus 1 week"
+    ExpiresByType text/javascript "access plus 1 week"
+    
+    # HTML - cache curto (recomendado para sites dinamicos)
+    ExpiresByType text/html "access plus 0 seconds"
+    
+    # Fontes - cache por 1 mes
+    ExpiresByType application/font-woff "access plus 1 month"
+    ExpiresByType application/font-woff2 "access plus 1 month"
+    ExpiresByType application/vnd.ms-fontobject "access plus 1 month"
+    ExpiresByType application/x-font-ttf "access plus 1 month"
+    ExpiresByType font/opentype "access plus 1 month"
+    ExpiresByType font/ttf "access plus 1 month"
+    ExpiresByType font/eot "access plus 1 month"
+    ExpiresByType font/otf "access plus 1 month"
+    
+</IfModule>
+
+# ============================================================
+# Error Pages Customizadas
+# ============================================================
+
+# Pagina de erro 404 customizada
+ErrorDocument 404 /404.html
+
+# Pagina de erro 403 (Forbidden)
+ErrorDocument 403 /404.html
+
+# Pagina de erro 500 (Internal Server Error)
+ErrorDocument 500 /404.html
+
+# ============================================================
+# Remover Informacoes do Servidor
+# =========================================================
+
+# Ocultar a versao do Apache
+ServerTokens Prod
+ServerSignature Off
+
+# ============================================================
+# Final do arquivo .htaccess
+# =========================================================

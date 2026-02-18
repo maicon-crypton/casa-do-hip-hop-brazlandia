@@ -1,0 +1,22 @@
+# robots.txt - Casa do Hip Hop Brazlandia
+# https://acasadohiphopbrazlandia.com.br
+
+# User-agent: todos os robôs
+User-agent: *
+
+# Permitir acesso a todas as páginas
+Allow: /
+
+# Sitemap
+Sitemap: https://acasadohiphopbrazlandia.com.br/sitemap.xml
+
+# Regras adicionais
+# Impedir acesso a arquivos internos (segurança)
+Disallow: /assets/
+Disallow: /style.css
+Disallow: /script.js
+Disallow: /.git/
+
+# Comentário para rastreadores
+# Este site é um site institucional sem conteúdo duplicado
+# Todas as páginas são públicas e indexáveis

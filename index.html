@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <!-- Metadados -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Casa do Hip Hop Brazlandia - Cultura, arte e transformação através da dança, rima e graffiti. Oficinas e eventos culturais em Brazlândia, DF.">
+    <meta name="keywords" content="hip hop, brazlandia, graffiti, breaking, dj, cultura urbana, df, brasilia">
+    <meta name="author" content="Casa do Hip Hop Brazlandia">
+
+    <!-- Canonical URL (SEO) -->
+    <link rel="canonical" href="https://acasadohiphopbrazlandia.com.br/">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://acasadohiphopbrazlandia.com.br/">
+    <meta property="og:title" content="Casa do Hip Hop Brazlandia | Cultura e Transformacao">
+    <meta property="og:description" content="Cultura, arte e transformacao atraves da danca, rima e graffiti. Oficinas e eventos culturais em Brazlandia, DF.">
+    <meta property="og:image" content="https://acasadohiphopbrazlandia.com.br/assets/images/og-image.jpg">
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:site_name" content="Casa do Hip Hop Brazlandia">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://acasadohiphopbrazlandia.com.br/">
+    <meta name="twitter:title" content="Casa do Hip Hop Brazlandia | Cultura e Transformacao">
+    <meta name="twitter:description" content="Cultura, arte e transformacao atraves da danca, rima e graffiti. Oficinas e eventos culturais em Brazlandia, DF.">
+    <meta name="twitter:image" content="https://acasadohiphopbrazlandia.com.br/assets/images/og-image.jpg">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/favicons/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicons/favicon-16x16.png">
+    <link rel="apple-touch-icon" href="assets/favicons/apple-touch-icon.png">
+
+    <!-- Title -->
+    <title>Casa do Hip Hop Brazlandia | Cultura e Transformação</title>
+
+    <!-- Preconnect para performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Fontes -->
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <!-- Bibliotecas de Animação -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Estilos Customizados -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Tailwind CSS (utilitário) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <!-- Skip Link para Acessibilidade -->
+    <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
+
+    <!-- Barra de Progresso do Scroll -->
+    <div class="progress-bar" id="scroll-progress" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" aria-label="Barra de progresso da página"></div>
+
+    <!-- ========================================================================
+         1. NAVEGAÇÃO
+         ======================================================================== -->
+    <nav class="main-nav" id="main-nav" role="navigation" aria-label="Navegação principal">
+        <div class="container flex items-center justify-between" style="height: 6rem;">
+            <!-- Logo -->
+            <a href="#" class="nav-logo" aria-label="Casa do Hip Hop Brazlandia - Página inicial">
+                CASA DO <span class="nav-logo__accent">HIP HOP</span>
+            </a>
+
+            <!-- Menu de Navegação -->
+            <ul class="nav-menu" id="nav-menu" role="menubar">
+                <li role="none">
+                    <a href="#sobre" class="nav-link" role="menuitem">SOBRE</a>
+                </li>
+                <li role="none">
+                    <a href="#oficinas" class="nav-link" role="menuitem">OFICINAS</a>
+                </li>
+                <li role="none">
+                    <a href="#eventos" class="nav-link" role="menuitem">EVENTOS</a>
+                </li>
+                <li role="none">
+                    <a href="#contato" class="btn-primary" role="menuitem">FALE CONNOSCO</a>
+                </li>
+            </ul>
+
+            <!-- Botão do Menu Mobile -->
+            <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Abrir menu de navegação" aria-expanded="false" aria-controls="nav-menu">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ========================================================================
+         2. HERO SECTION
+         ======================================================================== -->
+    <header class="hero-section" id="hero">
+        <!-- Background com Parallax -->
+        <div class="hero-background">
+            <img src="https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?q=80&w=2069&auto=format&fit=crop" alt="Cultura Hip Hop - Dança urbana em Brazlândia" class="hero-background__image">
+            <div class="hero-background__overlay"></div>
+        </div>
+
+        <!-- Conteúdo Principal -->
+        <div class="hero-content" data-aos="zoom-out" data-aos-duration="1500">
+            <span class="hero-tagline" data-aos="fade-up" data-aos-delay="500">RESPEITO • UNIÃO • ARTE</span>
+
+            <h1 class="hero-title" data-aos="fade-up" data-aos-delay="700">
+                <span class="hero-title__outline">BRAZLÂNDIA</span>
+            </h1>
+
+            <h1 class="hero-title" data-aos="fade-up" data-aos-delay="900">
+                CASA DO <span class="hero-title__accent">HIP HOP</span>
+            </h1>
+
+            <div class="flex flex-col md:flex-row gap-6 justify-center items-center mt-8" data-aos="fade-up" data-aos-delay="1100">
+                <a href="#oficinas" class="btn-primary w-full md:w-auto">
+                    INSCREVE-TE NAS OFICINAS
+                </a>
+                <a href="#eventos" class="btn-outline w-full md:w-auto">
+                    PRÓXIMOS EVENTOS
+                </a>
+            </div>
+        </div>
+
+        <!-- Indicador de Scroll -->
+        <div class="scroll-indicator" aria-hidden="true">
+            <div class="scroll-indicator__mouse">
+                <div class="scroll-indicator__dot"></div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ========================================================================
+         3. CONTEÚDO PRINCIPAL
+         ======================================================================== -->
+    <main id="main-content">
+        <!-- ========================================================================
+             3.1 SEÇÃO SOBRE
+             ======================================================================== -->
+        <section id="sobre" class="about-section" aria-labelledby="about-title">
+            <div class="container">
+                <div class="about-grid">
+                    <!-- Texto Sobre -->
+                    <div class="relative" data-aos="fade-right">
+                        <!-- Texto de Fundo Decorativo -->
+                        <span class="bg-text" style="top: -2.5rem; left: -2.5rem;" aria-hidden="true">RAP</span>
+
+                        <div class="relative z-10">
+                            <h2 id="about-title" class="mb-8 leading-tight">
+                                MAIS QUE UM PROJETO, <br>
+                                <span style="color: var(--color-accent-yellow);">UMA FAMÍLIA.</span>
+                            </h2>
+
+                            <p class="text-xl leading-relaxed mb-8">
+                                Desde a sua fundação, a Casa do Hip Hop de Brazlândia tem sido o epicentro da resistência cultural. Através da dança, da rima e da tinta, transformamos a energia da rua em oportunidade para centenas de jovens.
+                            </p>
+
+                            <!-- Estatísticas -->
+                            <div class="flex gap-10">
+                                <div class="about-stat">
+                                    <span class="about-stat__number">+500</span>
+                                    <span class="about-stat__label">Alunos</span>
+                                </div>
+                                <div class="about-stat">
+                                    <span class="about-stat__number">12</span>
+                                    <span class="about-stat__label">Anos de História</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Imagens -->
+                    <div class="grid grid-cols-2 gap-4" data-aos="fade-left">
+                        <div class="space-y-4">
+                            <img src="https://images.unsplash.com/photo-1547153760-18fc86324498?q=80&w=600&auto=format&fit=crop" alt="Arte de graffiti em Brazlândia" class="rounded-2xl grayscale hover:grayscale-0 transition-all duration-700 h-64 w-full object-cover" loading="lazy">
+                            <img src="https://images.unsplash.com/photo-1508807526345-15e9b5f4eaff?q=80&w=600&auto=format&fit=crop" alt="Dançarinos de Hip Hop em apresentação" class="rounded-2xl grayscale hover:grayscale-0 transition-all duration-700 h-48 w-full object-cover" loading="lazy">
+                        </div>
+                        <div class="space-y-4 pt-12">
+                            <img src="https://images.unsplash.com/photo-1571286627595-61017325615a?q=80&w=600&auto=format&fit=crop" alt="Sessão de freestyle rap" class="rounded-2xl grayscale hover:grayscale-0 transition-all duration-700 h-48 w-full object-cover" loading="lazy">
+                            <img src="https://images.unsplash.com/photo-1598911510795-d992a70548d4?q=80&w=600&auto=format&fit=crop" alt="DJ mixando música" class="rounded-2xl grayscale hover:grayscale-0 transition-all duration-700 h-64 w-full object-cover" loading="lazy">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================================================
+             3.2 SEÇÃO OFICINAS
+             ======================================================================== -->
+        <section id="oficinas" class="workshops-section" aria-labelledby="workshops-title">
+            <div class="container">
+                <!-- Cabeçalho -->
+                <div class="flex flex-col md:flex-row md:items-end justify-between mb-20 gap-6">
+                    <div data-aos="fade-up">
+                        <h2 id="workshops-title" class="mb-4">
+                            APRENDE COM <span style="color: var(--color-accent-yellow);">OS MELHORES</span>
+                        </h2>
+                        <p class="text-lg" style="color: var(--color-text-secondary);">Inscrições abertas para o semestre 2024.2</p>
+                    </div>
+
+                    <!-- Linha Decorativa -->
+                    <div class="h-[2px] flex-grow mx-10 bg-white/10 hidden md:block" data-aos="stretch-x"></div>
+
+                    <!-- Badge -->
+                    <span class="font-display text-2xl uppercase tracking-widest hidden md:block" style="color: var(--color-accent-yellow);">ELEMENTOS</span>
+                </div>
+
+                <!-- Grid de Cards -->
+                <div class="grid md:grid-cols-3 gap-10">
+                    <!-- Card 1: Breaking -->
+                    <article class="workshop-card group" data-aos="fade-up" data-aos-delay="100">
+                        <div class="workshop-card__image-container">
+                            <img src="https://images.unsplash.com/photo-1508807526345-15e9b5f4eaff?q=80&w=1000&auto=format&fit=crop" alt="Dançarino de Breaking em movimento" class="workshop-card__image" loading="lazy">
+                            <div class="workshop-card__overlay"></div>
+                            <span class="workshop-card__badge">Iniciação</span>
+                        </div>
+
+                        <div class="workshop-card__content">
+                            <h3 class="workshop-card__title group-hover:text-yellow-burn transition-colors">BREAKING DANCE</h3>
+                            <p class="workshop-card__description">
+                                Desenvolve a tua consciência corporal e aprende os fundamentos do breaking com b-boys veteranos.
+                            </p>
+                            <button onclick="handleEnrollment('Breaking Dance')" class="workshop-card__button" aria-label="Reservar vaga na oficina de Breaking Dance">
+                                RESERVAR VAGA
+                            </button>
+                        </div>
+                    </article>
+
+                    <!-- Card 2: Graffiti -->
+                    <article class="workshop-card group" data-aos="fade-up" data-aos-delay="200">
+                        <div class="workshop-card__image-container">
+                            <img src="https://images.unsplash.com/photo-1595113316349-9fa4eb24f884?q=80&w=1000&auto=format&fit=crop" alt="Arte de graffiti colorido" class="workshop-card__image" loading="lazy">
+                            <div class="workshop-card__overlay"></div>
+                            <span class="workshop-card__badge">Criação</span>
+                        </div>
+
+                        <div class="workshop-card__content">
+                            <h3 class="workshop-card__title group-hover:text-yellow-burn transition-colors">GRAFFITI ART</h3>
+                            <p class="workshop-card__description">
+                                Explora técnicas de spray, murais de grande escala e a história da arte urbana no Distrito Federal.
+                            </p>
+                            <button onclick="handleEnrollment('Graffiti Art')" class="workshop-card__button" aria-label="Reservar vaga na oficina de Graffiti Art">
+                                RESERVAR VAGA
+                            </button>
+                        </div>
+                    </article>
+
+                    <!-- Card 3: DJ -->
+                    <article class="workshop-card group" data-aos="fade-up" data-aos-delay="300">
+                        <div class="workshop-card__image-container">
+                            <img src="https://images.unsplash.com/photo-1501196354995-cbb51c65aaea?q=80&w=1000&auto=format&fit=crop" alt="DJ operando pick-ups" class="workshop-card__image" loading="lazy">
+                            <div class="workshop-card__overlay"></div>
+                            <span class="workshop-card__badge">Técnico</span>
+                        </div>
+
+                        <div class="workshop-card__content">
+                            <h3 class="workshop-card__title group-hover:text-yellow-burn transition-colors">DJ & TURNTABLISM</h3>
+                            <p class="workshop-card__description">
+                                Domina as pick-ups. Aprende scratch, beatmatching e a arte de comandar a pista de dança.
+                            </p>
+                            <button onclick="handleEnrollment('DJ & Turntablism')" class="workshop-card__button" aria-label="Reservar vaga na oficina de DJ e Turntablism">
+                                RESERVAR VAGA
+                            </button>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================================================
+             3.3 SEÇÃO MESTRES/INSTRUTORES
+             ======================================================================== -->
+        <section class="instructors-section" aria-labelledby="instructors-title">
+            <div class="container">
+                <!-- Texto de Fundo -->
+                <h2 class="text-8xl md:text-[12rem] font-display text-center absolute left-0 w-full select-none -mt-20 z-0" style="color: rgba(255,255,255,0.05);" aria-hidden="true">
+                    LEGADO
+                </h2>
+
+                <!-- Cabeçalho -->
+                <div class="relative z-10 text-center mb-24" data-aos="zoom-in">
+                    <h2 id="instructors-title" class="mb-4">
+                        NOSSOS <span style="color: var(--color-accent-yellow);">MESTRES</span>
+                    </h2>
+                    <div class="w-24 h-1 mx-auto" style="background-color: var(--color-accent-yellow);"></div>
+                </div>
+
+                <!-- Grid de Instrutores -->
+                <div class="grid grid-cols-2 lg:grid-cols-4 gap-12 relative z-10">
+                    <!-- Instrutor 1 -->
+                    <div class="instructor-card group" data-aos="fade-up">
+                        <div class="instructor-card__image-container rounded-2xl mb-6 shadow-2xl">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=800&auto=format&fit=crop" alt="Maicon - Instrutor de Rima e Poesia" class="instructor-card__image" loading="lazy">
+                            <div class="instructor-card__gradient" aria-hidden="true"></div>
+                        </div>
+                        <h4 class="instructor-card__name">MAICON</h4>
+                        <p class="instructor-card__role">Rima & Poesia</p>
+                    </div>
+
+                    <!-- Instrutor 2 -->
+                    <div class="instructor-card group" data-aos="fade-up" data-aos-delay="100">
+                        <div class="instructor-card__image-container rounded-2xl mb-6 shadow-2xl">
+                            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=800&auto=format&fit=crop" alt="Davi - Instrutor de Breaking" class="instructor-card__image" loading="lazy">
+                            <div class="instructor-card__gradient" aria-hidden="true"></div>
+                        </div>
+                        <h4 class="instructor-card__name">DAVI</h4>
+                        <p class="instructor-card__role">Breaking</p>
+                    </div>
+
+                    <!-- Instrutor 3 -->
+                    <div class="instructor-card group" data-aos="fade-up" data-aos-delay="200">
+                        <div class="instructor-card__image-container rounded-2xl mb-6 shadow-2xl">
+                            <img src="https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?q=80&w=800&auto=format&fit=crop" alt="Luna Art - Instrutora de Graffiti" class="instructor-card__image" loading="lazy">
+                            <div class="instructor-card__gradient" aria-hidden="true"></div>
+                        </div>
+                        <h4 class="instructor-card__name">LUNA ART</h4>
+                        <p class="instructor-card__role">Graffiti</p>
+                    </div>
+
+                    <!-- Instrutor 4 -->
+                    <div class="instructor-card group" data-aos="fade-up" data-aos-delay="300">
+                        <div class="instructor-card__image-container rounded-2xl mb-6 shadow-2xl">
+                            <img src="https://images.unsplash.com/photo-1501196354995-cbb51c65aaea?q=80&w=800&auto=format&fit=crop" alt="DJ Marola - Instrutor de Pick-ups" class="instructor-card__image" loading="lazy">
+                            <div class="instructor-card__gradient" aria-hidden="true"></div>
+                        </div>
+                        <h4 class="instructor-card__name">DJ MAROLA</h4>
+                        <p class="instructor-card__role">Pick-ups</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================================================
+             3.4 SEÇÃO EVENTOS
+             ======================================================================== -->
+        <section id="eventos" class="events-section" aria-labelledby="events-title">
+            <div class="container">
+                <h2 id="events-title" class="flex items-center gap-4 mb-20 flex-wrap">
+                    CALENDÁRIO <span style="color: #999;">DE RUA</span>
+                    <span class="live-badge ml-auto" aria-live="polite">AO VIVO</span>
+                </h2>
+
+                <!-- Lista de Eventos -->
+                <div class="space-y-4">
+                    <!-- Evento 1 -->
+                    <article class="event-item group" data-aos="fade-left">
+                        <div class="flex items-center gap-10">
+                            <span class="event-item__number">01</span>
+                            <div>
+                                <h3 class="event-item__title">BATALHA DA SUL</h3>
+                                <p class="event-item__location">Praça Central • 20:00h</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <div class="event-item__date hidden md:block">
+                                <p class="event-item__date-day">15 DE SETEMBRO</p>
+                                <p class="event-item__date-info">INSCRIÇÕES NO LOCAL</p>
+                            </div>
+                            <div class="event-item__arrow" aria-hidden="true">→</div>
+                        </div>
+                    </article>
+
+                    <!-- Evento 2 -->
+                    <article class="event-item group" data-aos="fade-left" data-aos-delay="100">
+                        <div class="flex items-center gap-10">
+                            <span class="event-item__number">02</span>
+                            <div>
+                                <h3 class="event-item__title">GRAFFITI JAM BRAZ</h3>
+                                <p class="event-item__location">Vila São José • 09:00h</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <div class="event-item__date hidden md:block">
+                                <p class="event-item__date-day">22 DE SETEMBRO</p>
+                                <p class="event-item__date-info">MATERIAL INCLUSO</p>
+                            </div>
+                            <div class="event-item__arrow" aria-hidden="true">→</div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ========================================================================
+         4. RODAPÉ (FOOTER)
+         ======================================================================== -->
+    <footer id="contato" class="site-footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Conteúdo Principal do Footer -->
+                <div data-aos="fade-up">
+                    <h2 class="footer-title">
+                        VAMOS FAZER<br>
+                        <span class="footer-title__accent">HISTÓRIA?</span>
+                    </h2>
+                    <p class="footer-description">
+                        Estamos abertos a parcerias, voluntariado e novos alunos. O movimento não para.
+                    </p>
+                    <a href="https://wa.me/5561999999999" target="_blank" rel="noopener noreferrer" class="btn-primary rounded-full inline-flex" aria-label="Entrar em contato pelo WhatsApp">
+                        CHAMAR NO WHATSAPP
+                    </a>
+                </div>
+
+                <!-- Links do Footer -->
+                <div class="grid grid-cols-2 gap-10" data-aos="fade-up" data-aos-delay="200">
+                    <!-- Menu -->
+                    <div>
+                        <h4 class="footer-section__title">Menu</h4>
+                        <ul class="footer-links">
+                            <li><a href="#sobre" class="footer-link">História</a></li>
+                            <li><a href="#oficinas" class="footer-link">Elementos</a></li>
+                            <li><a href="#eventos" class="footer-link">Calendário</a></li>
+                            <li><a href="#" class="footer-link">Portfólio</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Redes Sociais -->
+                    <div>
+                        <h4 class="footer-section__title">Redes</h4>
+                        <ul class="footer-links">
+                            <li><a href="#" class="footer-link" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+                            <li><a href="#" class="footer-link" target="_blank" rel="noopener noreferrer">YouTube</a></li>
+                            <li><a href="#" class="footer-link" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <p>© 2024 CASA DO HIP HOP BRAZLÂNDIA. FEITO PELO MOVIMENTO.</p>
+                <div class="footer-legal-links">
+                    <a href="#">Privacidade</a>
+                    <a href="#">Termos de Uso</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
