@@ -104,12 +104,15 @@
     <header class="hero-section" id="hero">
         <!-- Background com Parallax -->
         <div class="hero-background">
-            <img src="https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?q=80&w=2069&auto=format&fit=crop" alt="Cultura Hip Hop - Dança urbana em Brazlândia" class="hero-background__image">
+            <img src="assets/hero-bg.png" alt="Cultura Hip Hop - Brazlândia" class="hero-background__image">
             <div class="hero-background__overlay"></div>
         </div>
 
         <!-- Conteúdo Principal -->
         <div class="hero-content" data-aos="zoom-out" data-aos-duration="1500">
+            <!-- Logo -->
+            <img src="assets/logo.png" alt="Casa do Hip Hop Brazlândia" class="hero-logo" data-aos="fade-up" data-aos-delay="300">
+
             <span class="hero-tagline" data-aos="fade-up" data-aos-delay="500">RESPEITO • UNIÃO • ARTE</span>
 
             <h1 class="hero-title" data-aos="fade-up" data-aos-delay="700">
@@ -391,7 +394,68 @@
     </main>
 
     <!-- ========================================================================
-         4. RODAPÉ (FOOTER)
+         SEÇÃO NOSSO INSTAGRAM
+         ======================================================================== -->
+    <section id="instagram" class="instagram-section" aria-labelledby="instagram-title">
+        <!-- Animated video-like background -->
+        <div class="instagram-video-bg"></div>
+
+        <!-- Background decoration -->
+        <div class="instagram-bg-pattern"></div>
+
+        <div class="container">
+            <h2 id="instagram-title" class="text-center mb-16">
+                NOSSO <span style="color: var(--color-accent-yellow);">INSTAGRAM</span>
+            </h2>
+
+            <!-- Instagram Carousel -->
+            <div class="instagram-carousel" data-aos="fade-up">
+                <!-- Navigation Button -->
+                <button class="instagram-nav-btn instagram-nav-prev" aria-label="Post anterior">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="15 18 9 12 15 6"></polyline>
+                    </svg>
+                </button>
+
+                <!-- Posts Container -->
+                <div class="instagram-posts-wrapper">
+                    <div class="instagram-post active" data-post="0">
+                        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DSs3jDLEYrF/" data-instgrm-version="14"></blockquote>
+                    </div>
+                    <div class="instagram-post" data-post="1">
+                        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DRS8fFgEdTb/" data-instgrm-version="14"></blockquote>
+                    </div>
+                    <div class="instagram-post" data-post="2">
+                        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DU4U96ckd7F/" data-instgrm-version="14"></blockquote>
+                    </div>
+                </div>
+
+                <!-- Navigation Button -->
+                <button class="instagram-nav-btn instagram-nav-next" aria-label="Próximo post">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="9 18 15 12 9 6"></polyline>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Dots indicators -->
+            <div class="instagram-dots" aria-label="Navegação dos posts">
+                <button class="instagram-dot active" data-index="0" aria-label="Post 1"></button>
+                <button class="instagram-dot" data-index="1" aria-label="Post 2"></button>
+                <button class="instagram-dot" data-index="2" aria-label="Post 3"></button>
+            </div>
+
+            <!-- Link para perfil -->
+            <div class="instagram-profile-link text-center mt-12" data-aos="fade-up">
+                <a href="https://www.instagram.com/casadohiphopbrazlandia/" target="_blank" rel="noopener noreferrer" class="btn-outline">
+                    SEGUIR NO INSTAGRAM
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================================================
+         RODAPÉ (FOOTER)
          ======================================================================== -->
     <footer id="contato" class="site-footer" role="contentinfo">
         <div class="container">
@@ -449,6 +513,18 @@
     <!-- Scripts -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="script.js"></script>
+
+    <!-- Instagram Embed Script -->
+    <script async defer src="https://www.instagram.com/embed.js"></script>
+
+    <!-- Initialize Instagram Embed -->
+    <script>
+        window.addEventListener('load', function() {
+            if (window.instgrm) {
+                window.instgrm.Embeds.process();
+            }
+        });
+    </script>
 </body>
 
 </html>

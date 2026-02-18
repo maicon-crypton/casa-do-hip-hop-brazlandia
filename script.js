@@ -49,6 +49,77 @@
         }
     }
 
+    /**
+     * Initialize Instagram Carousel
+     * Handles navigation between Instagram posts
+     */
+    function initializeInstagramCarousel() {
+        const carousel = document.querySelector('.instagram-carousel');
+        if (!carousel) return;
+
+        const posts = carousel.querySelectorAll('.instagram-post');
+        const dots = document.querySelectorAll('.instagram-dot');
+        const prevBtn = carousel.querySelector('.instagram-nav-prev');
+        const nextBtn = carousel.querySelector('.instagram-nav-next');
+
+        if (posts.length === 0) return;
+
+        let currentIndex = 0;
+        const totalPosts = posts.length;
+
+        function showPost(index) {
+            // Remove active class from all posts and dots
+            posts.forEach(post => post.classList.remove('active'));
+            dots.forEach(dot => dot.classList.remove('active'));
+
+            // Add active class to current post and dot
+            posts[index].classList.add('active');
+            dots[index].classList.add('active');
+
+            // Re-process Instagram embed for the new post
+            if (window.instgrm) {
+                setTimeout(() => {
+                    window.instgrm.Embeds.process();
+                }, 100);
+            }
+        }
+
+        function nextPost() {
+            currentIndex = (currentIndex + 1) % totalPosts;
+            showPost(currentIndex);
+        }
+
+        function prevPost() {
+            currentIndex = (currentIndex - 1 + totalPosts) % totalPosts;
+            showPost(currentIndex);
+        }
+
+        // Add event listeners to navigation buttons
+        if (prevBtn) {
+            prevBtn.addEventListener('click', prevPost);
+        }
+        if (nextBtn) {
+            nextBtn.addEventListener('click', nextPost);
+        }
+
+        // Add event listeners to dots
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                currentIndex = index;
+                showPost(currentIndex);
+            });
+        });
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowLeft') prevPost();
+            if (e.key === 'ArrowRight') nextPost();
+        });
+
+        // Initial setup - show first post
+        showPost(0);
+    }
+
     // ========================================================================
     // SCROLL PROGRESS BAR
     // ========================================================================
@@ -248,6 +319,9 @@
 
         // Initialize mobile menu
         initializeMobileMenu();
+
+        // Initialize Instagram carousel
+        initializeInstagramCarousel();
 
         // Set up scroll event listener (debounced for performance)
         window.addEventListener('scroll', debouncedScrollHandler, { passive: true });
