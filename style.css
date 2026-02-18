@@ -1067,41 +1067,61 @@ ol {
     z-index: 0;
 }
 
-/* --- Reusable Instagram-style Gradient Background --- */
+/* --- Continuous Instagram-style Gradient Background --- */
 
-.section-gradient-bg {
-    position: relative;
-    overflow: hidden;
-    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+.gradient-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: linear-gradient(180deg, 
+        #0E0E0E 0%, 
+        #1a1a2e 20%, 
+        #16213e 50%, 
+        #0f3460 80%, 
+        #1a1a2e 100%);
+    background-size: 100% 200%;
+    animation: gradientScroll 12s ease infinite;
 }
 
-.section-gradient-bg::before {
+.gradient-background::before {
     content: '';
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    z-index: 0;
     background: linear-gradient(45deg, 
-        rgba(233, 69, 96, 0.15) 0%, 
-        rgba(131, 56, 236, 0.15) 25%, 
-        rgba(253, 203, 110, 0.15) 50%, 
-        rgba(233, 69, 96, 0.15) 75%, 
-        rgba(131, 56, 236, 0.15) 100%);
+        rgba(233, 69, 96, 0.1) 0%, 
+        rgba(131, 56, 236, 0.1) 25%, 
+        rgba(253, 203, 110, 0.1) 50%, 
+        rgba(233, 69, 96, 0.1) 75%, 
+        rgba(131, 56, 236, 0.1) 100%);
     background-size: 400% 400%;
     animation: gradientShift 8s ease infinite;
 }
 
-.section-gradient-bg > * {
-    position: relative;
-    z-index: 1;
+@keyframes gradientScroll {
+    0% { background-position: 50% 0%; }
+    50% { background-position: 50% 100%; }
+    100% { background-position: 50% 0%; }
 }
 
 @keyframes gradientShift {
     0% { background-position: 0% 50%; }
     50% { background-position: 100% 50%; }
     100% { background-position: 0% 50%; }
+}
+
+/* Seções com fundo transparente para mostrar o gradient contínuo */
+.workshops-section,
+.instructors-section,
+.events-section,
+.instagram-section,
+.site-footer {
+    background: transparent;
 }
 
 .bg-text--position {
