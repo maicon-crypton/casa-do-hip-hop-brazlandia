@@ -147,13 +147,118 @@
         </div>
     </header>
 
+    <!-- Marquee de Impacto -->
+    <div class="marquee-container">
+        <div class="marquee-content">
+            <span class="marquee-text">PEACE • LOVE • UNITY • HAVING FUN • BREAKING • GRAFFITI • DJING • MCING •</span>
+            <span class="marquee-text">PEACE • LOVE • UNITY • HAVING FUN • BREAKING • GRAFFITI • DJING • MCING •</span>
+        </div>
+    </div>
+
     <!-- ========================================================================
          3. CONTEÚDO PRINCIPAL
          ======================================================================== -->
     <main id="main-content">
         <!-- ========================================================================
-             3.1 SEÇÃO SOBRE
+             3.1 SEÇÃO SOBRE (P/B para Colorido)
              ======================================================================== -->
+        <section id="sobre" class="py-32 px-6" style="background-color: var(--bg-dark);">
+            <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-20 items-center">
+                <div class="img-urban-container" data-aos="fade-right">
+                    <img src="https://images.unsplash.com/photo-1547153760-18fc86324498?q=80&w=1887&auto=format&fit=crop" 
+                         alt="Cultura Hip Hop" class="img-urban w-full h-[600px] object-cover">
+                    <div class="absolute top-6 left-6 border-2 border-yellow-400 p-4 font-urban text-4xl" style="position: absolute; border: 2px solid var(--accent-yellow); padding: 1rem; font-family: var(--font-display); font-size: 2.25rem;">
+                        EST. 2012
+                    </div>
+                </div>
+                
+                <div data-aos="fade-left">
+                    <h2 class="text-6xl md:text-8xl font-urban leading-none mb-8 border-l-8 border-yellow-400 pl-8" style="border-left: 8px solid var(--accent-yellow); padding-left: 2rem;">
+                        MAIS QUE UM COLETIVO, <br> <span class="text-yellow-400">UMA FAMÍLIA.</span>
+                    </h2>
+                    <p class="text-gray-400 text-xl leading-relaxed mb-8 font-outfit">
+                        A Casa do Hip Hop Brazlândia é um ponto de resistência e arte. Trabalhamos a inclusão social através da cultura urbana, oferecendo ferramentas para que jovens periféricos escribam suas próprias histórias.
+                    </p>
+                    <div class="grid grid-cols-2 gap-6">
+                        <div class="p-6 bg-[#111]">
+                            <p class="font-urban text-5xl text-yellow-400">800+</p>
+                            <p class="text-xs uppercase tracking-widest text-gray-500">Jovens Impactados</p>
+                        </div>
+                        <div class="p-6 bg-[#111]">
+                            <p class="font-urban text-5xl text-yellow-400">12 ANOS</p>
+                            <p class="text-xs uppercase tracking-widest text-gray-500">De História</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================================================
+             3.2 SEÇÃO DE CALENDÁRIO (Agenda / Portfólio)
+             ======================================================================== -->
+        <section id="eventos" class="agenda-section">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="flex flex-col md:flex-row justify-between items-end mb-20 gap-6">
+                    <h2 class="text-8xl md:text-[10rem] font-urban leading-none">
+                        CALENDÁRIO <br> <span class="text-gray-300">& PORTFÓLIO</span>
+                    </h2>
+                    <p class="max-w-xs text-right text-sm font-bold uppercase tracking-widest text-gray-400">
+                        Acompanhe as batalhas, murais e lançamentos da nossa comunidade.
+                    </p>
+                </div>
+
+                <div class="space-y-0">
+                    <!-- Item de Agenda 1 -->
+                    <div class="agenda-item group" data-aos="fade-up">
+                        <div class="flex items-center gap-12">
+                            <span class="agenda-number">01</span>
+                            <div>
+                                <h3 class="agenda-title">Batalha da Praça</h3>
+                                <p class="agenda-meta">BRAZLÂNDIA - 19:00H • AGOSTO 25</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4 mt-6 md:mt-0">
+                            <span class="agenda-tag">GRATUITO</span>
+                            <span class="agenda-tag agenda-tag--highlight">DETALHES</span>
+                        </div>
+                    </div>
+
+                    <!-- Item de Agenda 2 -->
+                    <div class="agenda-item group" data-aos="fade-up">
+                        <div class="flex items-center gap-12">
+                            <span class="agenda-number">02</span>
+                            <div>
+                                <h3 class="agenda-title">Workshop Graffiti</h3>
+                                <p class="agenda-meta">VILA SÃO JOSÉ • SETEMBRO 02</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4 mt-6 md:mt-0">
+                            <span class="agenda-tag">15 VAGAS</span>
+                            <span class="agenda-tag agenda-tag--highlight">INSCREVER</span>
+                        </div>
+                    </div>
+
+                    <!-- Item de Agenda 3 -->
+                    <div class="agenda-item group" data-aos="fade-up">
+                        <div class="flex items-center gap-12">
+                            <span class="agenda-number">03</span>
+                            <div>
+                                <h3 class="agenda-title">Festival Hip Hop DF</h3>
+                                <p class="agenda-meta">TEATRO DA PRAÇA • OUTUBRO 15</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4 mt-6 md:mt-0">
+                            <span class="agenda-tag">SHOWCASE</span>
+                            <span class="agenda-tag agenda-tag--highlight">VER MAIS</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================================================
+         SEÇÃO OFICINAS (Original mantida)
+         ======================================================================== -->
         <section id="sobre" class="about-section" aria-labelledby="about-title">
             <div class="container">
                 <div class="about-grid">
@@ -461,57 +566,23 @@
     </section>
 
     <!-- ========================================================================
-         RODAPÉ (FOOTER)
+         RODAPÉ (FOOTER) - Custom
          ======================================================================== -->
-    <footer id="contato" class="site-footer" role="contentinfo">
-        <div class="container">
-            <div class="footer-grid">
-                <!-- Conteúdo Principal do Footer -->
-                <div data-aos="fade-up">
-                    <h2 class="footer-title">
-                        VAMOS FAZER<br>
-                        <span class="footer-title__accent">HISTÓRIA?</span>
-                    </h2>
-                    <p class="footer-description">
-                        Estamos abertos a parcerias, voluntariado e novos alunos. O movimento não para.
-                    </p>
-                    <a href="https://wa.me/5561999999999" target="_blank" rel="noopener noreferrer" class="btn-primary rounded-full inline-flex" aria-label="Entrar em contato pelo WhatsApp">
-                        CHAMAR NO WHATSAPP
-                    </a>
-                </div>
-
-                <!-- Links do Footer -->
-                <div class="grid grid-cols-2 gap-10" data-aos="fade-up" data-aos-delay="200">
-                    <!-- Menu -->
-                    <div>
-                        <h4 class="footer-section__title">Menu</h4>
-                        <ul class="footer-links">
-                            <li><a href="#sobre" class="footer-link">História</a></li>
-                            <li><a href="#oficinas" class="footer-link">Elementos</a></li>
-                            <li><a href="#eventos" class="footer-link">Calendário</a></li>
-                            <li><a href="#" class="footer-link">Portfólio</a></li>
-                        </ul>
-                    </div>
-
-                    <!-- Redes Sociais -->
-                    <div>
-                        <h4 class="footer-section__title">Redes</h4>
-                        <ul class="footer-links">
-                            <li><a href="#" class="footer-link" target="_blank" rel="noopener noreferrer">Instagram</a></li>
-                            <li><a href="#" class="footer-link" target="_blank" rel="noopener noreferrer">YouTube</a></li>
-                            <li><a href="#" class="footer-link" target="_blank" rel="noopener noreferrer">Facebook</a></li>
-                        </ul>
-                    </div>
-                </div>
+    <footer id="contato" class="site-footer-custom py-20 px-6">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-12">
+            <div>
+                <h2 class="font-urban text-6xl mb-4">VAMOS <span class="text-yellow-400">CONVERSAR?</span></h2>
+                <p class="text-gray-500 font-outfit mb-8">Traga sua arte ou apoie o movimento.</p>
+                <a href="#" class="btn-industrial w-fit">WHATSAPP: (61) 9 9999-9999</a>
             </div>
-
-            <!-- Footer Bottom -->
-            <div class="footer-bottom">
-                <p>© 2024 CASA DO HIP HOP BRAZLÂNDIA. FEITO PELO MOVIMENTO.</p>
-                <div class="footer-legal-links">
-                    <a href="#">Privacidade</a>
-                    <a href="#">Termos de Uso</a>
+            
+            <div class="text-right flex flex-col items-end">
+                <div class="flex gap-8 font-urban text-3xl mb-8">
+                    <a href="#" class="hover:text-yellow-400 transition-colors">INSTAGRAM</a>
+                    <a href="#" class="hover:text-yellow-400 transition-colors">YOUTUBE</a>
+                    <a href="#" class="hover:text-yellow-400 transition-colors">FACEBOOK</a>
                 </div>
+                <p class="text-gray-700 text-xs tracking-widest uppercase">© 2024 Casa do Hip Hop Brazlândia - Todos os direitos reservados</p>
             </div>
         </div>
     </footer>
