@@ -1825,7 +1825,7 @@ ol {
 }
 
 .agenda-item {
-    border-top: 2px solid #000;
+    border-top: 2px solid rgba(255,255,255,0.3);
     padding: 2.5rem 0;
     display: flex;
     flex-direction: column;
@@ -1848,7 +1848,7 @@ ol {
 }
 
 .agenda-item:last-child {
-    border-bottom: 2px solid #000;
+    border-bottom: 2px solid rgba(255,255,255,0.3);
 }
 
 .agenda-number {
@@ -1882,7 +1882,7 @@ ol {
 }
 
 .agenda-tag {
-    border: 1px solid #000;
+    border: 1px solid rgba(255,255,255,0.5);
     padding: 0.25rem 1rem;
     font-family: 'Bebas Neue', Impact, sans-serif;
     font-size: 1.25rem;
@@ -1907,3 +1907,6 @@ ol {
 /* Utility */
 .tracking-tighter { letter-spacing: -0.05em; }
 .tracking-widest { letter-spacing: 0.1em; }
+
+
+
