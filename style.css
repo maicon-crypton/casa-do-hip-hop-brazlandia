@@ -1779,18 +1779,18 @@ ol {
 /* Marquee */
 .marquee-container {
     background-color: var(--accent-yellow);
-    padding: 1.5rem 0;
+    padding: 2rem 0;
     overflow: hidden;
     white-space: nowrap;
-    border-top: 4px solid #000;
-    border-bottom: 4px solid #000;
+    border-top: 8px solid #000;
+    border-bottom: 8px solid #000;
     transform: rotate(-1deg);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
 .marquee-content {
     display: inline-block;
-    animation: marquee 30s linear infinite;
+    animation: marquee 25s linear infinite;
 }
 
 @keyframes marquee {
@@ -1800,10 +1800,11 @@ ol {
 
 .marquee-text {
     font-family: 'Bebas Neue', Impact, sans-serif;
-    font-size: 3rem;
+    font-size: 4rem;
     color: #000;
     display: inline-block;
-    margin-right: 2.5rem;
+    margin-right: 3rem;
+    font-weight: 400;
 }
 
 /* Floating Animation */

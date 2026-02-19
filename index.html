@@ -148,10 +148,10 @@
     </header>
 
     <!-- Marquee de Impacto -->
-    <div class="marquee-container">
+    <div class="marquee-container" style="padding: 2rem 0; border-top-width: 8px; border-bottom-width: 8px;">
         <div class="marquee-content">
-            <span class="marquee-text">PEACE • LOVE • UNITY • HAVING FUN • BREAKING • GRAFFITI • DJING • MCING •</span>
-            <span class="marquee-text">PEACE • LOVE • UNITY • HAVING FUN • BREAKING • GRAFFITI • DJING • MCING •</span>
+            <span class="marquee-text" style="font-size: 4rem;">BREAKING • GRAFFITI • DJ • MC • BRAZLÂNDIA • CULTURA URBANA •</span>
+            <span class="marquee-text" style="font-size: 4rem;">BREAKING • GRAFFITI • DJ • MC • BRAZLÂNDIA • CULTURA URBANA •</span>
         </div>
     </div>
 
@@ -566,23 +566,57 @@
     </section>
 
     <!-- ========================================================================
-         RODAPÉ (FOOTER) - Custom
+         RODAPÉ (FOOTER) - Original
          ======================================================================== -->
-    <footer id="contato" class="site-footer-custom py-20 px-6">
-        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-12">
-            <div>
-                <h2 class="font-urban text-6xl mb-4">VAMOS <span class="text-yellow-400">CONVERSAR?</span></h2>
-                <p class="text-gray-500 font-outfit mb-8">Traga sua arte ou apoie o movimento.</p>
-                <a href="#" class="btn-industrial w-fit">WHATSAPP: (61) 9 9999-9999</a>
-            </div>
-            
-            <div class="text-right flex flex-col items-end">
-                <div class="flex gap-8 font-urban text-3xl mb-8">
-                    <a href="#" class="hover:text-yellow-400 transition-colors">INSTAGRAM</a>
-                    <a href="#" class="hover:text-yellow-400 transition-colors">YOUTUBE</a>
-                    <a href="#" class="hover:text-yellow-400 transition-colors">FACEBOOK</a>
+    <footer id="contato" class="site-footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Conteúdo Principal do Footer -->
+                <div data-aos="fade-up">
+                    <h2 class="footer-title">
+                        VAMOS FAZER<br>
+                        <span class="footer-title__accent">HISTÓRIA?</span>
+                    </h2>
+                    <p class="footer-description">
+                        Estamos abertos a parcerias, voluntariado e novos alunos. O movimento não para.
+                    </p>
+                    <a href="https://wa.me/5561999999999" target="_blank" rel="noopener noreferrer" class="btn-primary rounded-full inline-flex" aria-label="Entrar em contato pelo WhatsApp">
+                        CHAMAR NO WHATSAPP
+                    </a>
                 </div>
-                <p class="text-gray-700 text-xs tracking-widest uppercase">© 2024 Casa do Hip Hop Brazlândia - Todos os direitos reservados</p>
+
+                <!-- Links do Footer -->
+                <div class="grid grid-cols-2 gap-10" data-aos="fade-up" data-aos-delay="200">
+                    <!-- Menu -->
+                    <div>
+                        <h4 class="footer-section__title">Menu</h4>
+                        <ul class="footer-links">
+                            <li><a href="#sobre" class="footer-link">História</a></li>
+                            <li><a href="#oficinas" class="footer-link">Elementos</a></li>
+                            <li><a href="#eventos" class="footer-link">Calendário</a></li>
+                            <li><a href="#" class="footer-link">Portfólio</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Redes Sociais -->
+                    <div>
+                        <h4 class="footer-section__title">Redes</h4>
+                        <ul class="footer-links">
+                            <li><a href="#" class="footer-link" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+                            <li><a href="#" class="footer-link" target="_blank" rel="noopener noreferrer">YouTube</a></li>
+                            <li><a href="#" class="footer-link" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <p>© 2024 CASA DO HIP HOP BRAZLÂNDIA. FEITO PELO MOVIMENTO.</p>
+                <div class="footer-legal-links">
+                    <a href="#">Privacidade</a>
+                    <a href="#">Termos de Uso</a>
+                </div>
             </div>
         </div>
     </footer>
