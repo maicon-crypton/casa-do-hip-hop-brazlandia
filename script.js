@@ -297,8 +297,40 @@
         }
     }
 
-    // Make function globally available for inline onclick handlers
-    window.handleEnrollment = handleEnrollment;
+    // ========================================================================
+    // SCROLL BAR & NAV EFFECT (New Custom)
+    // ========================================================================
+
+    /**
+     * Initialize scroll bar and glass nav effect
+     */
+    function initializeScrollBarAndNav() {
+        const scrollBar = document.getElementById('scrollBar');
+        const mainNav = document.getElementById('mainNav');
+
+        if (!scrollBar && !mainNav) return;
+
+        window.addEventListener('scroll', () => {
+            // Scroll Bar
+            if (scrollBar) {
+                const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+                const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+                const scrolled = (winScroll / height) * 100;
+                scrollBar.style.width = scrolled + "%";
+            }
+
+            // Glass Nav Effect
+            if (mainNav) {
+                if (window.scrollY > 50) {
+                    mainNav.classList.add('glass-nav');
+                    mainNav.classList.add('h-20');
+                } else {
+                    mainNav.classList.remove('glass-nav');
+                    mainNav.classList.remove('h-20');
+                }
+            }
+        });
+    }
 
     // ========================================================================
     // SCROLL HANDLER (Combined)
@@ -360,6 +392,9 @@
 
         // Initialize Instagram embed
         initializeInstagramEmbed();
+
+        // Initialize scroll bar and glass nav
+        initializeScrollBarAndNav();
 
         // Set up scroll event listener (debounced for performance)
         window.addEventListener('scroll', debouncedScrollHandler, { passive: true });
