@@ -20,8 +20,8 @@
     /* --- Cores de Accent (Instagram-inspired) --- */
     --color-accent-gold: #FDCB6E;
     --color-accent-gold-hover: #FFEAA7;
-    --color-accent-pink: #E94560;
-    --color-accent-purple: #8338EC;
+    --color-accent-pink: #FF6B6B;
+    --color-accent-purple: #F7971E;
     /* --- Cores de Accent Legacy --- */
     --color-accent-yellow: #FDCB6E;
     --color-accent-yellow-hover: #FFEAA7;
@@ -48,7 +48,7 @@
     --color-overlay-darker: rgba(0, 0, 0, 0.8);
     --color-overlay-darkest: rgba(0, 0, 0, 0.95);
     /* --- Tipografia --- */
-    --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-primary: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
     --font-display: 'Bebas Neue', Impact, sans-serif;
     /* --- Tamanhos de Fonte --- */
     --text-xs: 0.75rem;
@@ -174,11 +174,11 @@ a {
 }
 
 a:hover {
-    color: var(--color-accent-purple);
+    color: var(--color-accent-yellow);
 }
 
 a:focus-visible {
-    outline: 2px solid var(--color-accent-purple);
+    outline: 2px solid var(--color-accent-yellow);
     outline-offset: 2px;
 }
 
@@ -196,7 +196,7 @@ button {
 }
 
 button:focus-visible {
-    outline: 2px solid var(--color-accent-purple);
+    outline: 2px solid var(--color-accent-yellow);
     outline-offset: 2px;
 }
 
@@ -306,7 +306,7 @@ ol {
     top: 0;
     left: 0;
     height: 4px;
-    background: linear-gradient(90deg, var(--color-accent-purple), var(--color-accent-pink));
+    background: linear-gradient(90deg, var(--color-accent-yellow), var(--color-accent-red));
     z-index: var(--z-tooltip);
     width: 0%;
     transition: width 100ms ease;
@@ -357,7 +357,7 @@ ol {
 }
 
 .btn-primary:focus-visible {
-    outline: 2px solid var(--color-accent-purple);
+    outline: 2px solid var(--color-accent-yellow);
     outline-offset: 2px;
 }
 
@@ -393,7 +393,7 @@ ol {
 }
 
 .btn-outline:focus-visible {
-    outline: 2px solid var(--color-accent-purple);
+    outline: 2px solid var(--color-accent-yellow);
     outline-offset: 2px;
 }
 
@@ -453,7 +453,7 @@ ol {
 }
 
 .nav-logo__accent {
-    color: var(--color-accent-purple);
+    color: var(--color-accent-yellow);
 }
 
 .nav-menu {
@@ -484,7 +484,7 @@ ol {
 }
 
 .nav-link:hover {
-    color: var(--color-accent-purple);
+    color: var(--color-accent-yellow);
 }
 
 .nav-link:hover::after {
@@ -492,7 +492,7 @@ ol {
 }
 
 .nav-link:focus-visible {
-    outline: 2px solid var(--color-accent-purple);
+    outline: 2px solid var(--color-accent-yellow);
     outline-offset: var(--spacing-2);
 }
 
@@ -507,7 +507,7 @@ ol {
 }
 
 .mobile-menu-btn:hover {
-    color: var(--color-accent-purple);
+    color: var(--color-accent-yellow);
 }
 
 .mobile-menu-btn:focus-visible {
@@ -576,7 +576,7 @@ ol {
 .hero-background__overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient( to bottom, var(--color-overlay-darker) 0%, rgba(0, 0, 0, 0.4) 50%, var(--color-overlay-darker) 100%);
+    background: linear-gradient( to bottom, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.1) 50%, rgba(0, 0, 0, 0.4) 100%);
 }
 
 .hero-content {
@@ -591,7 +591,7 @@ ol {
     height: auto;
     margin: 0 auto var(--spacing-8);
     display: block;
-    filter: drop-shadow(0 0 30px rgba(131, 56, 236, 0.5)) drop-shadow(0 0 60px rgba(131, 56, 236, 0.3)) drop-shadow(0 4px 30px rgba(0, 0, 0, 0.8));
+    filter: drop-shadow(0 0 30px rgba(255, 255, 255, 0.5)) drop-shadow(0 0 60px rgba(255, 255, 255, 0.3)) drop-shadow(0 4px 30px rgba(0, 0, 0, 0.8));
     image-rendering: -webkit-optimize-contrast;
     image-rendering: crisp-edges;
     animation: logoGlow 3s ease-in-out infinite alternate;
@@ -599,15 +599,15 @@ ol {
 
 @keyframes logoGlow {
     0% {
-        filter: drop-shadow(0 0 25px rgba(131, 56, 236, 0.4)) drop-shadow(0 0 50px rgba(131, 56, 236, 0.2)) drop-shadow(0 4px 30px rgba(0, 0, 0, 0.8));
+        filter: drop-shadow(0 0 25px rgba(255, 255, 255, 0.4)) drop-shadow(0 0 50px rgba(255, 255, 255, 0.2)) drop-shadow(0 4px 30px rgba(0, 0, 0, 0.8));
     }
     100% {
-        filter: drop-shadow(0 0 40px rgba(131, 56, 236, 0.6)) drop-shadow(0 0 80px rgba(131, 56, 236, 0.3)) drop-shadow(0 4px 30px rgba(0, 0, 0, 0.8));
+        filter: drop-shadow(0 0 40px rgba(255, 255, 255, 0.6)) drop-shadow(0 0 80px rgba(255, 255, 255, 0.3)) drop-shadow(0 4px 30px rgba(0, 0, 0, 0.8));
     }
 }
 
 .hero-title {
-    font-size: clamp(4rem, 15vw, 12rem);
+    font-size: clamp(3rem, 10vw, 7rem);
     line-height: 0.9;
     margin-bottom: var(--spacing-4);
     text-shadow: 0 4px 30px rgba(0, 0, 0, 0.9);
@@ -620,18 +620,18 @@ ol {
 }
 
 .hero-title__accent {
-    color: var(--color-accent-purple);
-    text-shadow: 0 4px 30px rgba(0, 0, 0, 0.9), 0 0 40px rgba(131, 56, 236, 0.5);
+    color: var(--color-accent-yellow);
+    text-shadow: 0 4px 30px rgba(0, 0, 0, 0.9);
 }
 
 .hero-tagline {
     font-family: var(--font-display);
     font-size: var(--text-2xl);
     letter-spacing: 0.3em;
-    color: var(--color-accent-purple);
+    color: var(--color-accent-yellow);
     margin-top: var(--spacing-4);
     margin-bottom: var(--spacing-8);
-    text-shadow: 0 2px 15px rgba(0, 0, 0, 0.9), 0 0 20px rgba(131, 56, 236, 0.4);
+    text-shadow: 0 2px 15px rgba(0, 0, 0, 0.9);
 }
 
 
@@ -658,10 +658,9 @@ ol {
 .scroll-indicator__dot {
     width: 4px;
     height: 8px;
-    background-color: var(--color-accent-purple);
+    background-color: var(--color-accent-yellow);
     border-radius: var(--radius-full);
     animation: scroll-bounce 2s ease-in-out infinite;
-    box-shadow: 0 0 10px rgba(131, 56, 236, 0.6);
 }
 
 
@@ -1095,11 +1094,11 @@ ol {
     right: 0;
     bottom: 0;
     background: linear-gradient(45deg, 
-        rgba(233, 69, 96, 0.1) 0%, 
-        rgba(131, 56, 236, 0.1) 25%, 
+        rgba(255, 107, 107, 0.1) 0%, 
+        rgba(247, 151, 30, 0.1) 25%, 
         rgba(253, 203, 110, 0.1) 50%, 
-        rgba(233, 69, 96, 0.1) 75%, 
-        rgba(131, 56, 236, 0.1) 100%);
+        rgba(255, 107, 107, 0.1) 75%, 
+        rgba(247, 151, 30, 0.1) 100%);
     background-size: 400% 400%;
     animation: gradientShift 8s ease infinite;
 }
@@ -1260,7 +1259,7 @@ ol {
     bottom: 0;
     z-index: 0;
     overflow: hidden;
-    background: linear-gradient(45deg, rgba(233, 69, 96, 0.3) 0%, rgba(131, 56, 236, 0.3) 25%, rgba(253, 203, 110, 0.3) 50%, rgba(233, 69, 96, 0.3) 75%, rgba(131, 56, 236, 0.3) 100%);
+    background: linear-gradient(45deg, rgba(255, 107, 107, 0.3) 0%, rgba(247, 151, 30, 0.3) 25%, rgba(253, 203, 110, 0.3) 50%, rgba(255, 107, 107, 0.3) 75%, rgba(247, 151, 30, 0.3) 100%);
     background-size: 400% 400%;
     animation: videoGradientBg 8s ease infinite;
 }
@@ -1300,7 +1299,7 @@ ol {
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: radial-gradient(circle at 20% 80%, rgba(233, 69, 96, 0.15) 0%, transparent 50%), radial-gradient(circle at 80% 20%, rgba(253, 203, 110, 0.1) 0%, transparent 50%), radial-gradient(circle at 40% 40%, rgba(131, 56, 236, 0.08) 0%, transparent 40%);
+    background-image: radial-gradient(circle at 20% 80%, rgba(255, 107, 107, 0.15) 0%, transparent 50%), radial-gradient(circle at 80% 20%, rgba(253, 203, 110, 0.1) 0%, transparent 50%), radial-gradient(circle at 40% 40%, rgba(247, 151, 30, 0.08) 0%, transparent 40%);
     pointer-events: none;
     animation: instagramBgPulse 8s ease-in-out infinite;
     z-index: 1;
@@ -1328,7 +1327,7 @@ ol {
     left: -50%;
     width: 200%;
     height: 200%;
-    background: conic-gradient( from 0deg at 50% 50%, transparent 0deg, rgba(233, 69, 96, 0.05) 60deg, transparent 120deg, rgba(253, 203, 110, 0.05) 180deg, transparent 240deg, rgba(131, 56, 236, 0.05) 300deg, transparent 360deg);
+    background: conic-gradient( from 0deg at 50% 50%, transparent 0deg, rgba(255, 107, 107, 0.05) 60deg, transparent 120deg, rgba(253, 203, 110, 0.05) 180deg, transparent 240deg, rgba(247, 151, 30, 0.05) 300deg, transparent 360deg);
     animation: instagramBgRotate 20s linear infinite;
     pointer-events: none;
 }
@@ -1384,7 +1383,7 @@ ol {
     left: -20%;
     width: 140%;
     height: 140%;
-    background: linear-gradient( 135deg, rgba(233, 69, 96, 0.25) 0%, rgba(131, 56, 236, 0.25) 25%, rgba(253, 203, 110, 0.25) 50%, rgba(233, 69, 96, 0.25) 75%, rgba(131, 56, 236, 0.25) 100%);
+    background: linear-gradient( 135deg, rgba(255, 107, 107, 0.25) 0%, rgba(247, 151, 30, 0.25) 25%, rgba(253, 203, 110, 0.25) 50%, rgba(255, 107, 107, 0.25) 75%, rgba(247, 151, 30, 0.25) 100%);
     background-size: 400% 400%;
     filter: blur(50px);
     animation: videoBgGradient 8s ease infinite;
