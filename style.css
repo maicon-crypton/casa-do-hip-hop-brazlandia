@@ -530,7 +530,7 @@ ol {
         top: 0;
         right: -100%;
         width: 80%;
-        max-width: 320px;
+        max-width: 100%;
         height: 100vh;
         flex-direction: column;
         justify-content: center;
@@ -1433,7 +1433,7 @@ ol {
 
 @media (max-width: 640px) {
     .instagram-posts-wrapper {
-        max-width: 320px;
+        max-width: 100%;
     }
     .instagram-nav-btn {
         width: 44px;
@@ -1453,7 +1453,7 @@ ol {
 
 @media (min-width: 1025px) {
     .instagram-posts-wrapper {
-        max-width: 800px;
+        max-width: 1000px;
     }
 }
 
