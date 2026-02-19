@@ -41,7 +41,7 @@
     --color-text-muted: #757575;
     --color-text-accent: #FDCB6E;
     /* --- Cores de Borda --- */
-    --color-border-light: rgba(255, 255, 255, 0.1);
+    --color-border-light: rgba(255, 0, 0, 0.1);
     --color-border-medium: rgba(255, 255, 255, 0.2);
     /* --- Overlays --- */
     --color-overlay-dark: rgba(0, 0, 0, 0.6);
