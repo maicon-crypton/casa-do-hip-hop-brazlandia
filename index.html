@@ -38,6 +38,37 @@
     <!-- Estilos Customizados -->
     <link rel="stylesheet" href="style.css">
 
+    <!-- Typography Hero Styles -->
+    <style>
+        .font-urban {
+            font-family: 'Bebas Neue', cursive;
+        }
+
+        /* Efeito de contorno (Outline) */
+        .text-outline {
+            color: transparent;
+            -webkit-text-stroke: 1px rgba(255, 255, 255, 0.3);
+            transition: all 0.5s ease;
+        }
+
+        /* Efeito de brilho ao passar o mouse */
+        .container-typography:hover .text-outline {
+            -webkit-text-stroke: 1px #FFC107;
+            text-shadow: 0 0 15px rgba(255, 193, 7, 0.2);
+        }
+
+        /* Ajuste fino para sobreposição negativa */
+        .overlap-negative {
+            margin-top: -1.5rem;
+        }
+
+        @media (min-width: 768px) {
+            .overlap-negative {
+                margin-top: -4rem;
+            }
+        }
+    </style>
+
     <!-- Tailwind CSS (utilitário) -->
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
@@ -102,24 +133,31 @@
             <div class="hero-background__overlay"></div>
         </div>
 
-        <!-- Conteúdo Principal -->
+        <!-- Typography Design -->
         <div class="hero-content" style="display: flex; flex-direction: column; justify-content: center; align-items: center; height: 100%; width: 100%;">
-            <!-- Logo Centralizado e Abaixado -->
-            <img src="assets/logo.png" alt="Casa do Hip Hop Brazlândia" class="hero-logo" style="width: 280px; margin-top: 8rem; margin-bottom: 2rem;" data-aos="fade-up" data-aos-delay="300">
             
-            <!-- Textos na Lateral Inferior Esquerda -->
-            <div style="position: absolute; left: 5%; bottom: 15%; text-align: left;" data-aos="fade-right" data-aos-delay="500">
-                <span class="hero-tagline" style="display: block; margin-bottom: 1rem;">RESPEITO • UNIÃO • ARTE</span>
-                <h1 class="hero-title" style="font-size: 6rem; line-height: 0.9;">
-                    <span class="hero-title__outline" style="font-size: 7rem;">BRAZLÂNDIA</span>
+            <!-- Typography Container -->
+            <div class="container-typography text-center select-none cursor-default" style="margin-top: 6rem;">
+                <!-- Texto em Outline (Fundo) -->
+                <h1 class="text-outline text-7xl md:text-[10rem] leading-none font-urban tracking-tighter uppercase" data-aos="fade-up">
+                    BRAZLÂNDIA
                 </h1>
-                <h1 class="hero-title" style="font-size: 5rem;">
-                    CASA DO <span class="hero-title__accent">HIP HOP</span>
+                
+                <!-- Texto Preenchido (Frente com margem negativa) -->
+                <h1 class="overlap-negative text-7xl md:text-[8rem] leading-none font-urban text-white tracking-tighter uppercase" data-aos="fade-up" data-aos-delay="200">
+                    CASA DO <span class="text-[#FFC107]">HIP HOP</span>
                 </h1>
+                
+                <!-- Subtítulo / Tagline -->
+                <div class="mt-8 flex items-center justify-center gap-4" data-aos="fade-up" data-aos-delay="400">
+                    <div class="h-[1px] w-8 bg-[#FFC107]"></div>
+                    <span class="text-[#FFC107] font-urban text-xl tracking-[0.4em] uppercase">Resistência Cultural</span>
+                    <div class="h-[1px] w-8 bg-[#FFC107]"></div>
+                </div>
             </div>
             
             <!-- Botões Centralizados -->
-            <div class="flex flex-col md:flex-row gap-6 justify-center items-center mt-8" style="margin-top: auto;" data-aos="fade-up" data-aos-delay="1100">
+            <div class="flex flex-col md:flex-row gap-6 justify-center items-center mt-12" data-aos="fade-up" data-aos-delay="600">
                 <a href="#oficinas" class="btn-primary w-full md:w-auto">
                     INSCREVE-TE NAS OFICINAS
                 </a>
