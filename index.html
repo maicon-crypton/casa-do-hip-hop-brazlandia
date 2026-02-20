@@ -87,7 +87,8 @@
     <div class="progress-bar" id="scroll-progress" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" aria-label="Barra de progresso da página"></div>
 
     <!-- ========================================================================
-         1. NAVEGAÇÃO
+         HEADER - NAVEGAÇÃO
+         ======================================================================== -->
          ======================================================================== -->
     <nav class="main-nav" id="main-nav" role="navigation" aria-label="Navegação principal">
         <div class="container nav-container">
@@ -124,197 +125,56 @@
     </nav>
 
     <!-- ========================================================================
-         2. HERO SECTION
+         HERO SECTION - CABEÇALHO PRINCIPAL
+         ======================================================================== -->
          ======================================================================== -->
     <header class="hero-section" id="hero">
-        <!-- 3D Flip Card Design -->
-        <style>
-            :root {
-                --gold: #FFC107;
-                --dark: #0E0E0E;
-            }
+        <!-- Background com Parallax -->
+        <div class="hero-background">
+            <img src="assets/hero-bg.png" alt="Cultura Hip Hop - Brazlândia" class="hero-background__image">
+            <div class="hero-background__overlay"></div>
+        </div>
 
-            /* Container Principal com Perspectiva */
-            .scene {
-                perspective: 2500px;
-                width: 100%;
-                height: 100vh;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                background: radial-gradient(circle at center, #1a1a1a 0%, #000 100%);
-            }
-
-            .card {
-                width: 90%;
-                max-width: 800px;
-                height: 500px;
-                position: relative;
-                transition: transform 1.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-                transform-style: preserve-3d;
-                cursor: pointer;
-            }
-
-            .scene:hover .card {
-                transform: rotateY(180deg) scale(1.02);
-            }
-
-            .card-face {
-                position: absolute;
-                width: 100%;
-                height: 100%;
-                backface-visibility: hidden;
-                -webkit-backface-visibility: hidden;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-                border-radius: 40px;
-                box-shadow: 0 40px 80px rgba(0,0,0,0.6);
-            }
-
-            /* Lado A: Frente (Tipografia) */
-            .card-front {
-                background: rgba(14, 14, 14, 0.5);
-                backdrop-filter: blur(8px);
-                z-index: 2;
-            }
-
-            /* Lado B: Verso (Logo) */
-            .card-back {
-                transform: rotateY(180deg);
-                background: #0e0e0e;
-                z-index: 1;
-                overflow: hidden;
-            }
-
-            /* Estilo Tipográfico */
-            .text-outline {
-                color: transparent;
-                -webkit-text-stroke: 2px rgba(255, 255, 255, 0.1);
-                line-height: 0.8;
-            }
-
-            .text-main {
-                line-height: 0.8;
-                text-shadow: 0 10px 40px rgba(0,0,0,1);
-            }
-
-            /* Logo no Verso */
-            .logo-wrap {
-                position: relative;
-                transform: translateZ(100px);
-                transition: transform 0.5s ease;
-            }
-
-            .logo-main {
-                width: 380px;
-                height: auto;
-                filter: drop-shadow(0 0 30px rgba(255, 193, 7, 0.4));
-                animation: breathe 3s ease-in-out infinite;
-            }
-
-            @keyframes breathe {
-                0%, 100% { transform: scale(1) translateY(0); filter: drop-shadow(0 0 20px rgba(255,193,7,0.3)); }
-                50% { transform: scale(1.05) translateY(-10px); filter: drop-shadow(0 0 40px rgba(255,193,7,0.6)); }
-            }
-
-            /* Reflexo de brilho */
-            .shine {
-                position: absolute;
-                top: 0;
-                left: -100%;
-                width: 50%;
-                height: 100%;
-                background: linear-gradient(to right, transparent, rgba(255,255,255,0.03), transparent);
-                transform: skewX(-25deg);
-                transition: 0.75s;
-            }
-
-            .card:hover .shine {
-                left: 150%;
-            }
-
-            /* Marcas de água subtis */
-            .watermark {
-                position: absolute;
-                font-family: 'Bebas Neue';
-                color: rgba(255, 255, 255, 0.015);
-                font-size: 15rem;
-                pointer-events: none;
-                z-index: 0;
-                text-transform: uppercase;
-            }
-        </style>
-
-        <div class="scene">
-            <div class="card" id="card">
+        <!-- Typography Design -->
+        <div class="hero-content" style="display: flex; flex-direction: column; justify-content: center; align-items: center; height: 100%; width: 100%;">
+            
+            <!-- Typography Container -->
+            <div class="container-typography text-center select-none cursor-default" style="margin-top: 6rem;">
+                <!-- Texto em Outline (Fundo) -->
+                <h1 class="text-outline text-7xl md:text-[10rem] leading-none font-urban tracking-tighter uppercase" data-aos="fade-up">
+                    BRAZLÂNDIA
+                </h1>
                 
-                <!-- FRENTE (TEXTO) -->
-                <div class="card-face card-front">
-                    <div class="shine"></div>
-                    <div class="watermark" style="top: -10%; left: -5%;">BRAZ</div>
-                    <div class="text-center select-none z-10">
-                        <h1 class="text-outline text-7xl md:text-[11rem] font-urban uppercase tracking-tighter">
-                            BRAZLÂNDIA
-                        </h1>
-                        <h1 class="text-main text-7xl md:text-[9rem] font-urban text-white uppercase tracking-tighter -mt-12 md:-mt-24">
-                            CASA DO <span class="text-[#FFC107]">HIP HOP</span>
-                        </h1>
-                        <div class="mt-16 flex flex-col items-center gap-4">
-                            <div class="w-1 h-16 bg-gradient-to-b from-[#FFC107] to-transparent opacity-50"></div>
-                            <p class="text-white/20 font-urban text-lg tracking-[1em] uppercase">Interagir para ver a Logo</p>
-                        </div>
-                    </div>
+                <!-- Texto Preenchido (Frente com margem negativa) -->
+                <h1 class="overlap-negative text-7xl md:text-[8rem] leading-none font-urban text-white tracking-tighter uppercase" data-aos="fade-up" data-aos-delay="200">
+                    CASA DO <span class="text-[#FFC107]">HIP HOP</span>
+                </h1>
+                
+                <!-- Subtítulo / Tagline -->
+                <div class="mt-8 flex items-center justify-center gap-4" data-aos="fade-up" data-aos-delay="400">
+                    <div class="h-[1px] w-8 bg-[#FFC107]"></div>
+                    <span class="text-[#FFC107] font-urban text-xl tracking-[0.4em] uppercase">Resistência Cultural</span>
+                    <div class="h-[1px] w-8 bg-[#FFC107]"></div>
                 </div>
-
-                <!-- VERSO (A LOGO) -->
-                <div class="card-face card-back">
-                    <div class="shine"></div>
-                    <div class="watermark" style="bottom: -10%; right: -5%;">LOGO</div>
-                    
-                    <div class="logo-wrap">
-                        <img src="assets/logo.png" 
-                             alt="Logo Casa do Hip Hop" 
-                             class="logo-main">
-                    </div>
-
-                    <div class="absolute bottom-10 text-center" style="transform: translateZ(50px)">
-                        <h2 class="font-urban text-white/30 text-2xl tracking-[0.5em]">BRAZLÂNDIA • DF</h2>
-                    </div>
-                </div>
-
+            </div>
+            
+            <!-- Botões Centralizados -->
+            <div class="flex flex-col md:flex-row gap-6 justify-center items-center mt-12" data-aos="fade-up" data-aos-delay="600">
+                <a href="#oficinas" class="btn-primary w-full md:w-auto">
+                    INSCREVE-TE NAS OFICINAS
+                </a>
+                <a href="#eventos" class="btn-outline w-full md:w-auto">
+                    PRÓXIMOS EVENTOS
+                </a>
             </div>
         </div>
 
-        <script>
-            const card = document.getElementById('card');
-            const scene = document.querySelector('.scene');
-
-            scene.addEventListener('mousemove', (e) => {
-                const rect = scene.getBoundingClientRect();
-                const x = e.clientX - rect.left;
-                const y = e.clientY - rect.top;
-                
-                const centerX = rect.width / 2;
-                const centerY = rect.height / 2;
-                
-                const rotateX = (y - centerY) / 25;
-                const rotateY = (centerX - x) / 25;
-
-                const isFlipped = card.matches(':hover');
-                
-                if (isFlipped) {
-                    card.style.transform = `rotateY(${180 + rotateY}deg) rotateX(${-rotateX}deg) scale(1.02)`;
-                } else {
-                    card.style.transform = `rotateY(${-rotateY}deg) rotateX(${-rotateX}deg)`;
-                }
-            });
-
-            scene.addEventListener('mouseleave', () => {
-                card.style.transform = `rotateY(0deg) rotateX(0deg)`;
-            });
-        </script>
+        <!-- Indicador de Scroll -->
+        <div class="scroll-indicator" aria-hidden="true">
+            <div class="scroll-indicator__mouse">
+                <div class="scroll-indicator__dot"></div>
+            </div>
+        </div>
     </header>
 
     <!-- Marquee de Impacto -->
@@ -326,7 +186,7 @@
     </div>
 
     <!-- ========================================================================
-         3. CONTEÚDO PRINCIPAL
+         CONTEÚDO PRINCIPAL
          ======================================================================== -->
     <main id="main-content">
         <!-- ========================================================================
@@ -791,7 +651,9 @@
         </div>
     </footer>
 
-    <!-- Scripts -->
+    <!-- ========================================================================
+         FIM DO DOCUMENTO
+         ======================================================================== -->-->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="script.js"></script>
     <script async defer src="https://www.instagram.com/embed.js"></script>
