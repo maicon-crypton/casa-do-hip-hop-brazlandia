@@ -1,0 +1,17 @@
+# Netlify Redirects Configuration
+# https://docs.netlify.com/routing/redirects/
+
+# Redirect all routes to index.html for SPA-like behavior (if needed)
+# /* /index.html 200
+
+# Custom 404 page
+# /404 /404.html 404
+
+# Clean URLs (remove .html extension)
+# /about /about.html 200
+
+# Redirects with 301 (permanent)
+# /old-page /new-page 301
+
+# Rewrite rules (without changing URL)
+# /api/* /.netlify/functions/:splat 200

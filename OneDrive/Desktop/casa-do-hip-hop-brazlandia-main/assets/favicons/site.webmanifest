@@ -1,0 +1,20 @@
+{
+    "name": "Casa do Hip Hop Brazlandia",
+    "short_name": "Hip Hop Brazlandia",
+    "description": "Cultura, arte e transformacao atraves da danca, rima e graffiti",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#0E0E0E",
+    "theme_color": "#FFC107",
+    "icons": [{
+            "src": "/assets/favicons/favicon-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/assets/favicons/favicon-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}

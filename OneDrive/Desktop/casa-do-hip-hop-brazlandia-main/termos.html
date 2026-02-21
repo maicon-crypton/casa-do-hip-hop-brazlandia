@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Termos de Uso do site Casa do Hip Hop Brazlandia - Condicoes de uso do site.">
+    <title>Termos de Uso - Casa do Hip Hop Brazlandia</title>
+
+    <!-- Preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://acasadohiphopbrazlandia.com.br/termos.html">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/favicons/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicons/favicon-16x16.png">
+    <link rel="apple-touch-icon" href="assets/favicons/apple-touch-icon.png">
+
+    <style>
+        /* Styles for terms of use page */
+        
+         :root {
+            --color-primary-black: #0E0E0E;
+            --color-primary-white: #FFFFFF;
+            --color-accent-yellow: #FFC107;
+            --color-text-secondary: #B0B0B0;
+            --color-bg-darker: #0A0A0A;
+            --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            --font-display: 'Bebas Neue', Impact, sans-serif;
+        }
+        
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: var(--font-primary);
+            font-size: 1rem;
+            line-height: 1.7;
+            color: var(--color-primary-white);
+            background-color: var(--color-primary-black);
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem 1.5rem;
+        }
+        
+        .header {
+            text-align: center;
+            padding: 4rem 0 2rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            margin-bottom: 3rem;
+        }
+        
+        .header__logo {
+            font-family: var(--font-display);
+            font-size: 2rem;
+            letter-spacing: 0.1em;
+            color: var(--color-primary-white);
+            text-decoration: none;
+            display: inline-block;
+            margin-bottom: 1rem;
+        }
+        
+        .header__logo span {
+            color: var(--color-accent-yellow);
+        }
+        
+        .header__title {
+            font-family: var(--font-display);
+            font-size: 3rem;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.5rem;
+        }
+        
+        .header__date {
+            color: var(--color-text-secondary);
+            font-size: 0.875rem;
+        }
+        
+        .content {
+            padding: 2rem 0;
+        }
+        
+        .content h2 {
+            font-family: var(--font-display);
+            font-size: 1.75rem;
+            letter-spacing: 0.05em;
+            color: var(--color-accent-yellow);
+            margin: 2.5rem 0 1rem;
+        }
+        
+        .content h2:first-child {
+            margin-top: 0;
+        }
+        
+        .content p {
+            color: var(--color-text-secondary);
+            margin-bottom: 1rem;
+        }
+        
+        .content ul {
+            margin: 1rem 0;
+            padding-left: 1.5rem;
+        }
+        
+        .content li {
+            color: var(--color-text-secondary);
+            margin-bottom: 0.5rem;
+            list-style: disc;
+        }
+        
+        .content a {
+            color: var(--color-accent-yellow);
+            text-decoration: none;
+        }
+        
+        .content a:hover {
+            text-decoration: underline;
+        }
+        
+        .highlight-box {
+            background: rgba(255, 193, 7, 0.1);
+            border-left: 4px solid var(--color-accent-yellow);
+            padding: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .highlight-box p {
+            margin: 0;
+            color: var(--color-primary-white);
+        }
+        
+        .footer-nav {
+            text-align: center;
+            padding: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            margin-top: 3rem;
+        }
+        
+        .footer-nav__links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+        
+        .footer-nav__link {
+            color: var(--color-text-secondary);
+            text-decoration: none;
+            font-size: 0.875rem;
+        }
+        
+        .footer-nav__link:hover {
+            color: var(--color-accent-yellow);
+        }
+        
+        .back-home {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--color-accent-yellow);
+            text-decoration: none;
+            font-family: var(--font-display);
+            font-size: 1.25rem;
+            letter-spacing: 0.05em;
+            margin-bottom: 2rem;
+            transition: transform 0.2s ease;
+        }
+        
+        .back-home:hover {
+            transform: translateX(-5px);
+        }
+        
+        .accept-note {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 1rem;
+            border-radius: 0.5rem;
+            margin-top: 1rem;
+            font-size: 0.875rem;
+            color: var(--color-text-secondary);
+        }
+        
+        @media (max-width: 640px) {
+            .header__title {
+                font-size: 2rem;
+            }
+            .container {
+                padding: 1.5rem 1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <a href="index.html" class="back-home">
+            <span>&larr;</span> VOLTAR AO SITE
+        </a>
+
+        <header class="header">
+            <a href="index.html" class="header__logo">CASA DO <span>HIP HOP</span></a>
+            <h1 class="header__title">Termos de Uso</h1>
+            <p class="header__date">Ultima atualizacao: Fevereiro de 2026</p>
+        </header>
+
+        <main class="content">
+            <h2>1. Aceitacao dos Termos</h2>
+            <p>Ao acessar e utilizar o site da Casa do Hip Hop Brazlandia, voce aceita e concorda em cumprir os seguintes Termos de Uso. Se voce nao concordar com qualquer parte destes termos, solicitamos que nao utilize nosso site.</p>
+            <p>Estes termos podem ser atualizados periodicamente. O uso continuado do site apos quaisquer modificacoes significa que voce aceita as novas condicoes.</p>
+
+            <h2>2. Uso do Site</h2>
+            <p>Este site e fornecido para fins informativos e de contato. Você concorda em utilizar o site apenas para os seguintes propositos:</p>
+            <ul>
+                <li>Obter informacoes sobre a Casa do Hip Hop Brazlandia</li>
+                <li>Conhecer as oficinas e eventos culturais oferecidos</li>
+                <li>Entrar em contato com nossa equipe via WhatsApp</li>
+                <li>Obter informacoes sobre como participar de nossas atividades</li>
+            </ul>
+
+            <h2>3. Proibicoes</h2>
+            <p>Você concorda em NAO:</p>
+            <ul>
+                <li>Utilizar o site para qualquer finalidade ilegal ou nao autorizada</li>
+                <li>Tentar obter acesso nao autorizado a qualquer parte do site</li>
+                <li>Interferir ou interromper o funcionamento do site</li>
+                <li>Copiar, modificar ou distribuir qualquer conteudo do site sem autorizacao</li>
+                <li>Usar o site para enviar spam, malware ou qualquer conteudo malicioso</li>
+                <li>Coletar informacoes de outros usuarios do site</li>
+                <li>Realizar scraping ou extração automatizada de dados</li>
+            </ul>
+
+            <h2>4. Propriedade Intelectual</h2>
+            <div class="highlight-box">
+                <p><strong>Todo o conteudo</strong> deste site, incluindo textos, imagens, videos, logotipos, design e codigo, e propriedade da Casa do Hip Hop Brazlandia ou foi licenciado para uso.</p>
+            </div>
+            <p>Você pode:</p>
+            <ul>
+                <li>Visualizar o conteudo para uso pessoal e nao comercial</li>
+                <li>Compartilhar links para nossas paginas</li>
+                <li>Citar trechos com creditos adequados</li>
+            </ul>
+            <p>Você NAO pode:</p>
+            <ul>
+                <li>Copiar ou reproduzir o conteudo para fins comerciais</li>
+                <li>Modificar ou criar obras derivadas</li>
+                <li>Usar我们的 marcas registradas sem permissao</li>
+                <li>Remover avisos de direitos autorais</li>
+            </ul>
+
+            <h2>5. Conteudo de Terceiros</h2>
+            <p>Nosso site pode conter links para sites de terceiros e conteudos integrados de servicos como:</p>
+            <ul>
+                <li>Unsplash (imagens)</li>
+                <li>Google Fonts (tipografia)</li>
+                <li>AOS (animacoes)</li>
+                <li>Tailwind CSS (framework)</li>
+                <li>WhatsApp (contato)</li>
+                <li>Redes Sociais</li>
+            </ul>
+            <p>Nao temos controle sobre esses servicos de terceiros e nao somos responsaveis por seu conteudo, praticas de privacidade ou disponibilidade.</p>
+
+            <h2>6. Isencao de Garantias</h2>
+            <p>Este site e fornecido "como esta" e "como disponivel". A Casa do Hip Hop Brazlandia nao garante que:</p>
+            <ul>
+                <li>O site estara sempre disponivel ou livre de erros</li>
+                <li>As informacoes sejam precisas, completas ou atualizadas</li>
+                <li>Qualquer erro ou defeito seja corrigido</li>
+            </ul>
+            <p>Você usa o site por sua propria conta e risco.</p>
+
+            <h2>7. Limitacao de Responsabilidade</h2>
+            <p>A Casa do Hip Hop Brazlandia nao sera responsavel por:</p>
+            <ul>
+                <li>Danos diretos, indiretos, incidentais ou consequenciais</li>
+                <li>Perda de dados, lucros ou oportunidades de negocio</li>
+                <li>Danos causados por virus, malware ou outro material malicioso</li>
+                <li>Problemasresultantes do uso de sites de terceiros</li>
+            </ul>
+
+            <h2>8. Indenizacao</h2>
+            <p>Você concorda em indenizar, defender e isentar a Casa do Hip Hop Brazlandia de qualquer reclamacao, demanda, perda, custo ou despesa (incluindo honorarios advocaticios) decorrente:</p>
+            <ul>
+                <li>Seu uso do site</li>
+                <li>Violacao destes Termos de Uso</li>
+                <li>Violacao de direitos de terceiros</li>
+                <li>Conteudo que voce enviar ao site</li>
+            </ul>
+
+            <h2>9. Alteracoes nos Termos</h2>
+            <p>Reservamos o direito de modificar estes Termos de Uso a qualquer momento. As alteracoes entrarao em vigor imediatamente apos a publicacao no site. Seu uso continuado do site apos quaisquer alteracoes constitui aceitaçao dos novos termos.</p>
+
+            <h2>10. Lei Aplicavel</h2>
+            <p>Estes Termos de Uso serao regidos e interpretados de acordo com as leis do Brasil. Qualquer disputa decorrente destes termos sera resolvida nos tribunais brasileiro.</p>
+
+            <h2>11. Contato</h2>
+            <p>Se voce tiver alguma duvida sobre estes Termos de Uso, entre em contato conosco:</p>
+            <ul>
+                <li><strong>WhatsApp</strong>: <a href="https://wa.me/5561999999999" target="_blank" rel="noopener noreferrer">Clique aqui para mandar mensagem</a></li>
+                <li><strong>Email</strong>: contato@acasadohiphopbrazlandia.com.br</li>
+            </ul>
+
+            <div class="accept-note">
+                <p>Ao utilizar este site, voce reconhece que leu, entendeu e concorda em cumprir estes Termos de Uso.</p>
+            </div>
+        </main>
+
+        <footer class="footer-nav">
+            <nav class="footer-nav__links">
+                <a href="index.html" class="footer-nav__link">Inicio</a>
+                <a href="index.html#sobre" class="footer-nav__link">Sobre</a>
+                <a href="index.html#oficinas" class="footer-nav__link">Oficinas</a>
+                <a href="index.html#eventos" class="footer-nav__link">Eventos</a>
+                <a href="index.html#contato" class="footer-nav__link">Contato</a>
+                <a href="privacidade.html" class="footer-nav__link">Politica de Privacidade</a>
+            </nav>
+        </footer>
+    </div>
+</body>
+
+</html>

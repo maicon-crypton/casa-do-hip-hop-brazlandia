@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Pagina nao encontrada - Casa do Hip Hop Brazlandia">
+    <title>404 - Pagina Nao Encontrada | Casa do Hip Hop Brazlandia</title>
+
+    <!-- Preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://acasadohiphopbrazlandia.com.br/404.html">
+
+    <style>
+        /* 404 Page Styles */
+        
+         :root {
+            --color-primary-black: #0E0E0E;
+            --color-primary-white: #FFFFFF;
+            --color-accent-yellow: #FFC107;
+            --color-accent-red: #E53935;
+            --color-text-secondary: #B0B0B0;
+            --color-bg-darker: #0A0A0A;
+            --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            --font-display: 'Bebas Neue', Impact, sans-serif;
+        }
+        
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: var(--font-primary);
+            font-size: 1rem;
+            line-height: 1.7;
+            color: var(--color-primary-white);
+            background-color: var(--color-primary-black);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .error-page {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+        /* Background decoration */
+        
+        .error-page::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 20% 80%, rgba(255, 193, 7, 0.05) 0%, transparent 50%), radial-gradient(circle at 80% 20%, rgba(229, 57, 53, 0.05) 0%, transparent 50%);
+            pointer-events: none;
+        }
+        
+        .error-content {
+            position: relative;
+            z-index: 1;
+            max-width: 600px;
+        }
+        
+        .error-code {
+            font-family: var(--font-display);
+            font-size: 12rem;
+            line-height: 1;
+            letter-spacing: 0.05em;
+            background: linear-gradient(135deg, var(--color-accent-yellow) 0%, var(--color-accent-red) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1rem;
+            animation: pulse 2s ease-in-out infinite;
+        }
+        
+        @keyframes pulse {
+            0%,
+            100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.7;
+            }
+        }
+        
+        .error-title {
+            font-family: var(--font-display);
+            font-size: 3rem;
+            letter-spacing: 0.1em;
+            margin-bottom: 1rem;
+        }
+        
+        .error-title__accent {
+            color: var(--color-accent-yellow);
+        }
+        
+        .error-description {
+            font-size: 1.125rem;
+            color: var(--color-text-secondary);
+            margin-bottom: 2rem;
+            max-width: 400px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .error-actions {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            font-family: var(--font-display);
+            font-size: 1.25rem;
+            letter-spacing: 0.05em;
+            padding: 1rem 2rem;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary {
+            background-color: var(--color-accent-yellow);
+            color: var(--color-primary-black);
+        }
+        
+        .btn-primary:hover {
+            box-shadow: 0 0 20px 5px rgba(255, 193, 7, 0.3);
+            transform: translateY(-2px);
+        }
+        
+        .btn-outline {
+            background-color: transparent;
+            color: var(--color-primary-white);
+            border: 2px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .btn-outline:hover {
+            border-color: var(--color-primary-white);
+            background-color: var(--color-primary-white);
+            color: var(--color-primary-black);
+        }
+        /* Navigation hints */
+        
+        .nav-hints {
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .nav-hints__title {
+            font-family: var(--font-display);
+            font-size: 1rem;
+            letter-spacing: 0.1em;
+            color: var(--color-text-secondary);
+            margin-bottom: 1rem;
+        }
+        
+        .nav-hints__links {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .nav-hints__link {
+            color: var(--color-text-secondary);
+            text-decoration: none;
+            font-size: 0.875rem;
+            transition: color 0.2s ease;
+        }
+        
+        .nav-hints__link:hover {
+            color: var(--color-accent-yellow);
+        }
+        /* Logo */
+        
+        .logo {
+            position: absolute;
+            top: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            letter-spacing: 0.1em;
+            color: var(--color-primary-white);
+            text-decoration: none;
+            z-index: 10;
+        }
+        
+        .logo span {
+            color: var(--color-accent-yellow);
+        }
+        /* Footer */
+        
+        .footer {
+            text-align: center;
+            padding: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.875rem;
+            color: var(--color-text-secondary);
+        }
+        
+        .footer a {
+            color: var(--color-accent-yellow);
+            text-decoration: none;
+        }
+        
+        .footer a:hover {
+            text-decoration: underline;
+        }
+        /* Responsive */
+        
+        @media (max-width: 640px) {
+            .error-code {
+                font-size: 6rem;
+            }
+            .error-title {
+                font-size: 2rem;
+            }
+            .error-description {
+                font-size: 1rem;
+            }
+            .btn {
+                width: 100%;
+            }
+            .error-actions {
+                flex-direction: column;
+            }
+            .nav-hints__links {
+                flex-direction: column;
+                gap: 0.75rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <a href="index.html" class="logo">CASA DO <span>HIP HOP</span></a>
+
+    <main class="error-page">
+        <div class="error-content">
+            <div class="error-code">404</div>
+            <h1 class="error-title">PAGINA <span class="error-title__accent">NAO ENCONTRADA</span></h1>
+            <p class="error-description">
+                Ops! A pagina que voce procura nao existe ou foi movida. Que tal voltar para a pagina inicial?
+            </p>
+
+            <div class="error-actions">
+                <a href="index.html" class="btn btn-primary">
+                    <span>&larr;</span> VOLTAR AO INICIO
+                </a>
+                <a href="index.html#contato" class="btn btn-outline">
+                    FALAR COM A GENTE
+                </a>
+            </div>
+
+            <nav class="nav-hints" aria-label="Navegacao rapida">
+                <p class="nav-hints__title">OU ACESSE:</p>
+                <div class="nav-hints__links">
+                    <a href="index.html#sobre" class="nav-hints__link">Sobre Nos</a>
+                    <a href="index.html#oficinas" class="nav-hints__link">Oficinas</a>
+                    <a href="index.html#eventos" class="nav-hints__link">Eventos</a>
+                    <a href="privacidade.html" class="nav-hints__link">Privacidade</a>
+                    <a href="termos.html" class="nav-hints__link">Termos</a>
+                </div>
+            </nav>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2024 Casa do Hip Hop Brazlandia. <a href="privacidade.html">Privacidade</a> | <a href="termos.html">Termos</a></p>
+    </footer>
+
+    <script>
+        // Log error for debugging (optional)
+        console.log('404 Page - URL: ' + window.location.href);
+    </script>
+</body>
+
+</html>
