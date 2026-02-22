@@ -27,6 +27,8 @@ logs/
 .idea/
 *.sublime-project
 *.sublime-workspace
+.idlerc/
+.jdks/
 
 # OS generated files
 .DS_Store
@@ -38,9 +40,21 @@ ehthumbs.db
 Thumbs.db
 desktop.ini
 
+# Windows system files
+NTUSER.DAT*
+ntuser.dat*
+*.regtrans-ms
+*.blf
+
 # Temporary files
 *.tmp
 *.temp
 *.bak
 *.swp
 *~
+
+# Project specific
+*.ai
+*.psd
+*.sketch
+*.fig
